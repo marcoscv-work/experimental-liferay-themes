@@ -418,9 +418,15 @@ $activeResponsiveMenu: #F5AF45;
 		@include box-shadow(none);
 	}
 
-	.dockbar-user-notifications .user-notifications-count {
-		background-color: darken($dockbarGradientEnd, 10%);
-		border: 1px solid darken($dockbarGradientEnd, 10%);
+	.dockbar-user-notifications {
+		.dropdown-toggle .user-notifications-count {
+			background-color: darken($dockbarGradientEnd, 10%);
+			border: 1px solid darken($dockbarGradientEnd, 10%);
+		}
+
+		.user-notifications-header {
+			border-bottom: 1px solid darken($dockbarGradientEnd, 10%);
+		}
 	}
 
 	body.yui3-skin-sam .yui3-widget-mask {
@@ -491,6 +497,10 @@ $activeResponsiveMenu: #F5AF45;
 				height: auto;
 				position: static;
 				width: 300px;
+			}
+
+			.dockbar-user-notifications .dropdown-toggle .user-notifications-count {
+				display: inline;
 			}
 
 			.navbar-inner {
