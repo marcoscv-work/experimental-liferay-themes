@@ -338,9 +338,15 @@ $dockbarVerticalWidth: 240px;
 		@include box-shadow(none);
 	}
 
-	.dockbar-user-notifications .user-notifications-count {
-		background-color: darken($dockbarGradientEnd, 10%);
-		border: 1px solid darken($dockbarGradientEnd, 10%);
+	.dockbar-user-notifications {
+		.dropdown-toggle .user-notifications-count {
+			background-color: darken($dockbarGradientEnd, 10%);
+			border: 1px solid darken($dockbarGradientEnd, 10%);
+		}
+
+		.user-notifications-header {
+			border-bottom: 1px solid darken($dockbarGradientEnd, 10%);
+		}
 	}
 
 	body.yui3-skin-sam .yui3-widget-mask {
@@ -789,10 +795,16 @@ $dockbarVerticalWidth: 240px;
 			display: none;
 		}
 
-		.dockbar.navbar .container .nav-collapse {
-			display: block;
-			height: auto;
-			overflow: visible;
+		.dockbar.navbar {
+			.dockbar-user-notifications .dropdown-toggle .user-notifications-count {
+				display: inline;
+			}
+
+			.container .nav-collapse {
+				display: block;
+				height: auto;
+				overflow: visible;
+			}
 		}
 	}
 }
