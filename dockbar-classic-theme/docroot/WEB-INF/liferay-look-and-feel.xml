@@ -5,7 +5,7 @@
 	<compatibility>
 		<version>6.2.0+</version>
 	</compatibility>
-	<theme id="dockbar-classic-theme" name="Dockbar classic theme">
+	<theme id="dockbar-classic" name="Dockbar classic theme">
 		<settings>
 			<setting configurable="true" key="dockbar-split" type="checkbox" value="true" />
 			<setting configurable="true" key="portlet-setup-show-borders-default" type="checkbox" value="false" />
