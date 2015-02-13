@@ -5,7 +5,7 @@
 	<compatibility>
 		<version>6.2.0+</version>
 	</compatibility>
-	<theme id="dockbar-vertical-theme" name="Dockbar vertical theme">
+	<theme id="dockbar-vertical" name="Dockbar vertical theme">
 		<settings>
 			<setting configurable="true" key="dockbar-vertical" type="checkbox" value="true" />
 			<setting configurable="true" key="portlet-setup-show-borders-default" type="checkbox" value="false" />
