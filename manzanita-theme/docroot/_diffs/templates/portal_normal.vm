@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html class="$root_css_class" dir="#language ("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$the_title - $company_name</title>
+
+	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+
+	$theme.include($top_head_include)
+</head>
+
+#set ($dockbarVertical = $theme.getSetting("dockbar-vertical"))
+
+#if ($dockbarVertical == true)
+	#set ($css_class = "${css_class} dockbar-vertical")
+#end
+
+#set ($spaceBetweenHeader = $theme.getSetting("space-between-header"))
+
+#if ($spaceBetweenHeader == "normal")
+	#set ($css_class = "${css_class} space-between-header")
+#elseif ($spaceBetweenHeader == "below")
+	#set ($css_class = "${css_class} negative-space-between-header")
+#end
+
+<body class="$css_class">
+
+<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
+
+$theme.include($body_top_include)
+
+#if ($is_signed_in)
+	#dockbar()
+#end
+
+<div id="wrapper">
+	<header id="banner" role="banner">
+		#set ($headerMaxWidth = $theme.getSetting("header-max-width"))
+
+		#if ($headerMaxWidth)
+			#set ($headerMaxWidthStyle = "style='max-width:$headerMaxWidth'")
+		#else
+			#set ($headerMaxWidthStyle = "")
+		#end
+		<div class="container" $headerMaxWidthStyle>
+			#parse ("$full_templates_path/navigation.vm")
+		</div>
+	</header>
+
+	#set ($mainContainerFluid = $theme.getSetting("main-container-fluid"))
+
+	#if ($mainContainerFluid == true)
+		<div class="container-fluid" id="content">
+	#else
+		<div class="container" id="content">
+	#end
+
+		#if ($selectable)
+			$theme.include($content_include)
+		#else
+			$portletDisplay.recycle()
+
+			$portletDisplay.setTitle($the_title)
+
+			$theme.wrapPortlet("portlet.vm", $content_include)
+		#end
+	</div>
+
+	<footer id="footer" role="contentinfo">
+		#set ($footerMaxWidth = $theme.getSetting("footer-max-width"))
+
+		#if ($footerMaxWidth)
+			#set ($footerMaxWidthStyle = "style='max-width:$footerMaxWidth'")
+		#else
+			#set ($footerMaxWidthStyle = "")
+		#end
+		<div class="container" $footerMaxWidthStyle>
+			#set ($footerContent = $theme.getSetting("footer-web-content-article-id"))
+
+			#if (($footerContent!=""))
+				$theme.journalArticle($footerContent, $themeDisplay.getSiteGroupId(), "")
+			#else
+				<div class="row">
+					<div class="span4">
+						<ul class="unstyled">
+							<li>liferay.com</li>
+							<li>dev.liferay.com</li>
+							<li>AlloyUI.com</li>
+							<li>AlloyEditor.com</li>
+						</ul>
+					</div>
+					<div class="span4">
+						<ul class="unstyled">
+							<li>liferay.com</li>
+							<li>dev.liferay.com</li>
+							<li>AlloyUI.com</li>
+							<li>AlloyEditor.com</li>
+						</ul>
+					</div>
+					<div class="span4">
+						<ul class="unstyled">
+							<li>Copyright 2015</li>
+							<li>License checker</li>
+						</ul>
+					</div>
+				</div>
+			#end
+		</div>
+	</footer>
+</div>
+
+$theme.include($body_bottom_include)
+
+$theme.include($bottom_include)
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 6.2.0//EN" "http://www.liferay.com/dtd/liferay-look-and-feel_6_2_0.dtd">
+
+<look-and-feel>
+	<compatibility>
+		<version>6.2.0+</version>
+	</compatibility>
+	<theme id="manzanita-theme" name="Manzanita Theme">
+		<settings>
+			<setting configurable="true" key="dockbar-vertical" type="checkbox" value="true" />
+			<setting configurable="true" key="portlet-setup-show-borders-default" type="checkbox" value="false" />
+			<setting configurable="true" key="custom-logo" type="checkbox" value="false" />
+			<setting configurable="true" key="space-between-header" type="select" options="none,below,normal" value="none" />
+			<setting configurable="true" key="footer-web-content-article-id" type="text" value="" />
+			<setting configurable="true" key="main-container-fluid" type="checkbox" value="false" />
+			<setting configurable="true" key="header-max-width" type="text" value="" />
+			<setting configurable="true" key="footer-max-width" type="text" value="" />
+		</settings>
+	</theme>
+</look-and-feel>
+
+

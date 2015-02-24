@@ -1,0 +1,69 @@
+<nav class="$nav_css_class" id="navigation" role="navigation">
+	<ul aria-label="#language ("site-pages")" class="ul-main-nav" role="menubar">
+		<span class="menu-icon hidden-desktop">
+			<span class="line1"></span>
+			<span class="line2"></span>
+		</span>
+		<div id="heading">
+			<a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
+			#set ($customLogo = $theme.getSetting("custom-logo"))
+
+			#if ($customLogo == true)
+				<img alt="$logo_description" height="35" src="$site_logo" width="35" />
+			#else
+				<img alt="$logo_description" height="35" src="$images_folder/logo.png" width="35" />
+			#end
+			</a>
+		</div>
+		#foreach ($nav_item in $nav_items)
+			#set ($nav_item_attr_has_popup="")
+			#set ($nav_item_attr_selected="")
+			#set ($nav_item_css_class = "")
+
+			#if ($nav_item.isSelected())
+				#set ($nav_item_attr_selected="aria-selected='true'")
+				#set ($nav_item_css_class = "selected")
+			#end
+
+			#if ($nav_item.hasChildren())
+				#set ($nav_item_attr_has_popup="aria-haspopup='true'")
+			#end
+
+			<li class="$nav_item_css_class" id="layout_$nav_item.getLayoutId()" $nav_item_attr_selected role="presentation">
+				<a aria-labelledby="layout_$nav_item.getLayoutId()" href="$nav_item.getURL()" $nav_item_attr_has_popup $nav_item.getTarget() role="menuitem"><span>$nav_item.icon() $nav_item.getName()</span></a>
+
+				#if ($nav_item.hasChildren())
+					<ul class="child-menu" role="menu">
+						#foreach ($nav_child in $nav_item.getChildren())
+							#set ($nav_child_attr_selected="")
+							#set ($nav_child_css_class = "false")
+
+							#if ($nav_child.isSelected())
+								#set ($nav_child_attr_selected="aria-selected='true'")
+								#set ($nav_child_css_class = "selected")
+							#end
+
+							<li class="$nav_child_css_class" id="layout_$nav_child.getLayoutId()" $nav_child_attr_selected role="presentation">
+								<a aria-labelledby="layout_$nav_child.getLayoutId()" href="$nav_child.getURL()" $nav_child.getTarget() role="menuitem">$nav_child.getName()</a>
+							</li>
+						#end
+					</ul>
+				#end
+			</li>
+		#end
+
+		<span class="right-icon-group">
+			<span class="portlet-search">
+				$theme.search()
+			</span>
+			<a href="#" class="open-search">
+				<i class="icon-search"></i>
+			</a>
+			#if (!$is_signed_in)
+				<a data-redirect="$is_login_redirect_required" href="$sign_in_url" id="sign-in" rel="nofollow">
+					<i class="icon-user" title="$sign_in_text"></i>
+				</a>
+			#end
+		</span>
+	</ul>
+</nav>
