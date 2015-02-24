@@ -1,7 +1,7 @@
 AUI().ready(
+	'anim',
 	'liferay-navigation-interaction',
 	'liferay-sign-in-modal',
-	'anim',
 	'transition',
 	function(A) {
 		var Lang = A.Lang;
@@ -46,17 +46,19 @@ AUI().ready(
 					}
 				);
 			}
-		};
+		}
 
-		//Creating portlets node list no navegate
+		// Creating portlets node list no navegate
 
 		creationIndex = true;
+
 		portletsIndex = A.one('.portletsIndex ul');
 
 		// Node portlets on screen selector, to decide if create lateral index navigation
 		var allPortletsNodes = A.all('#column-1 .portlet-boundary');
 		var allPortletsNodesSize = allPortletsNodes.size();
 
+		// Theme setting add class to show styles
 		var lateralPortletsIndexPresent = A.one('.lateral-portlets-index');
 
 		console.log('PORTLETS on screen: '+allPortletsNodesSize);
@@ -82,14 +84,14 @@ AUI().ready(
 						if (gettitle) {
 							var title = gettitle.text();
 						} else {
-							var title = "Unnamed Portlet";
+							var title = "Title hide";
 						};
 
 					} else {
 						var title = gettitle.text();
 					};
 
-					console.log(title);
+					//console.log(title);
 
 					if (creationIndex) {
 						var nodeHeight = (100 / allPortletsNodesSize);
@@ -121,6 +123,7 @@ AUI().ready(
 		// Functions called on resize and scroll
 
 		if (allPortletsNodesSize >= 2 && lateralPortletsIndexPresent) {
+			BODY.addClass('lateral-portlets-index-ready');
 			A.on('windowresize', fullSizeNodesCalc);
 			fullSizeNodesCalc();
 			creationIndex = false;
@@ -145,7 +148,7 @@ AUI().ready(
 
 					new A.Anim(
 						{
-							duration: 0.8,
+							duration: 0.5,
 							easing: 'easeBoth',
 							node: 'win',
 							to: {

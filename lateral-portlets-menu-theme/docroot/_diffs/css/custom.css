@@ -5,14 +5,16 @@
 @import "mixins";
 
 .aui {
-	.lateral-portlets-index {
+	.lateral-portlets-index-ready {
 		border-left: 40px solid transparent;
+
+		@include transition(border-left 0.2s ease-in-out);
 
 		&.lfr-has-dockbar-vertical {
 			border-left-width: 280px;
 		}
 
-		&.signed-in.lateral-portlets-index.dockbar-vertical {
+		&.signed-in.lateral-portlets-index-ready.dockbar-vertical {
 			.portletsIndex {
 				border-bottom: 45px solid transparent;
 			}
@@ -86,7 +88,7 @@
 		border-left: 240px solid transparent;
 		padding-left: 0;
 
-		&.lateral-portlets-index {
+		&.lateral-portlets-index-ready {
 			.portletsIndex {
 				@include transition(left 0.4s ease-in-out);
 
@@ -95,12 +97,12 @@
 		}
 	}
 
-	.lfr-has-add-content, .lateral-portlets-index.lfr-has-add-content {
+	.lfr-has-add-content, .lateral-portlets-index-ready.lfr-has-add-content {
 		border-left: 350px solid transparent;
 		padding-left: 0;
 	}
 
-	.lfr-has-edit-layout, .lateral-portlets-index.lfr-has-edit-layout {
+	.lfr-has-edit-layout, .lateral-portlets-index-ready.lfr-has-edit-layout {
 		border-left: 460px solid transparent;
 		padding-left: 0;
 	}
