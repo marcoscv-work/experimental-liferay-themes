@@ -15,3 +15,11 @@ You can find here the next themes:
 
 * New vertical dockbar over your _styled liferay theme
 * We will be able to change dockbar colors easier
+
+
+## [lateral-portlets-menu-theme](https://github.com/marcoscv-work/experimental-liferay-themes/tree/master/lateral-portlets-menu-theme)
+
+
+* New lateral-portlets-menu-theme
+* It use vertical dockbar over your _styled liferay theme
+* We will be able to change dockbar colors easier
