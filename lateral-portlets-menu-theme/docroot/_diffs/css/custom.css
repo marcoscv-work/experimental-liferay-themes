@@ -1,0 +1,107 @@
+@import "aui/alloy-font-awesome/scss/mixins-alloy";
+@import "aui/alloy-font-awesome/scss/variables";
+@import "compass";
+@import "compass/css3/transform";
+@import "mixins";
+
+.aui {
+	.lateral-portlets-index {
+		border-left: 40px solid transparent;
+
+		&.lfr-has-dockbar-vertical {
+			border-left-width: 280px;
+		}
+
+		&.signed-in.lateral-portlets-index.dockbar-vertical {
+			.portletsIndex {
+				border-bottom: 45px solid transparent;
+			}
+		}
+
+		.portletsIndex {
+			@include transform(rotate(-180deg));
+			@include transition(left 0.1s ease-in-out);
+
+			display: table;
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100%;
+			z-index: 1;
+			background: #333;
+			vertical-align: middle;
+			width: 40px;
+
+			ul {
+				list-style: none;
+				margin: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: 100%;
+				width: 40px;
+				vertical-align: middle;
+
+				li {
+					margin: 0;
+					position: relative;
+					text-align: center;
+					width: 100%;
+					@include transition(all 0.2s ease-in-out);
+
+					&.aactive {
+						box-shadow: inset -2px 0 0 #999;
+						background: #555;
+						@include transition(all 0.2s ease-in-out);
+					}
+
+					a {
+						/*@include transform(rotate(-90deg));*/
+						@include transform(rotate(-266deg) translate3d(-50%, -50%, 0));
+						transform-origin: 0% 0%;
+
+						color: #FFF;
+						left: 50%;
+						position: absolute;
+						text-align: center;
+						top: 50%;
+						vertical-align: middle;
+						line-height: 1.1;
+						font-size: 12px;
+						text-transform: uppercase;
+
+						&:hover, &:active, &:focus {
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	.lfr-has-dockbar-vertical {
+		border-left: 240px solid transparent;
+		padding-left: 0;
+
+		&.lateral-portlets-index {
+			.portletsIndex {
+				@include transition(left 0.4s ease-in-out);
+
+				left: 240px;
+			}
+		}
+	}
+
+	.lfr-has-add-content, .lateral-portlets-index.lfr-has-add-content {
+		border-left: 350px solid transparent;
+		padding-left: 0;
+	}
+
+	.lfr-has-edit-layout, .lateral-portlets-index.lfr-has-edit-layout {
+		border-left: 460px solid transparent;
+		padding-left: 0;
+	}
+}
