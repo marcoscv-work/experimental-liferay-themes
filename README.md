@@ -26,3 +26,12 @@ You can find here the next themes:
 * We will be able to change dockbar colors easier
 
 ![alt tag](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/previews/lateral-portlets-menu-theme.gif)
+
+## [manzanita-theme](https://github.com/marcoscv-work/experimental-liferay-themes/tree/master/manzanita-theme)
+
+
+* Inspired by the apple website
+* It use vertical dockbar over your _styled liferay theme
+* Flexible main menu
+
+![alt tag](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/previews/manzanita-theme.gif)
