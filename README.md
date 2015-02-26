@@ -22,7 +22,7 @@ You can find here the next themes:
 
 
 * New lateral-portlets-menu-theme
-* It use vertical dockbar over your _styled liferay theme
+* It uses vertical dockbar over your _styled liferay theme
 * We will be able to change dockbar colors easier
 
 ![alt tag](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/previews/lateral-portlets-menu-theme.gif)
@@ -31,7 +31,17 @@ You can find here the next themes:
 
 
 * Inspired by the apple website
-* It use vertical dockbar over your _styled liferay theme
+* It uses vertical dockbar over your _styled liferay theme
 * Flexible main menu
 
 ![alt tag](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/previews/manzanita-theme.gif)
+
+## [lateral-nav-theme](https://github.com/marcoscv-work/experimental-liferay-themes/tree/master/lateral-nav-theme)
+
+
+* Lateral main menu
+* It uses classic dockbar (split and normal). Over your _styled liferay theme
+* Theme setting for configure position of logo and hamburger icon
+
+![alt tag](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/previews/lateral-nav-theme.gif)
+![alt tag](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/previews/lateral-nav-theme.png)
