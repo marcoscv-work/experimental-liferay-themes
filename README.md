@@ -1,4 +1,4 @@
-# Experimental Liferay themes
+# Experimental Liferay themes - FREE USE
 
 These themes are not official Liferay themes.
 
