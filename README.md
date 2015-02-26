@@ -35,13 +35,3 @@ You can find here the next themes:
 * Flexible main menu
 
 ![alt tag](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/previews/manzanita-theme.gif)
-
-## [lateral-nav-theme](https://github.com/marcoscv-work/experimental-liferay-themes/tree/master/lateral-nav-theme)
-
-
-* Lateral main menu
-* It use classic dockbar (split and normal). Over your _styled liferay theme
-* Theme setting to controle position of logo and hamburguer icon
-
-![alt tag](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/previews/lateral-nav-theme.gif)
-![alt tag](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/previews/lateral-nav-theme.png)
