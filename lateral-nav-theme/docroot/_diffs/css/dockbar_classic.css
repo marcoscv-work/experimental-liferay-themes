@@ -1,0 +1,655 @@
+@import "aui/alloy-font-awesome/scss/mixins-alloy";
+@import "aui/alloy-font-awesome/scss/variables";
+@import "compass";
+@import "compass/css3/user-interface";
+@import "mixins";
+
+$dockbarGradientEnd: #1273C7;
+$dockbarGradientStart: #118ADE;
+
+$dockbarOpenGradientEnd: #0993DD;
+$dockbarOpenGradientStart: #0EA6F9;
+
+$lightLiferayBlue: #45CBF5;
+$standarLiferayBlue: #009AE5;
+
+$lightGreen: #92F545;
+$standarGrey: #555;
+
+$activeResponsiveMenu: #F5AF45;
+
+.aui {
+	body {
+		color: $standarGrey;
+		font-weight: 200;
+	}
+
+	a {
+		color: $standarLiferayBlue;
+		font-weight: 200;
+
+		&:hover {
+			color: $standarLiferayBlue;
+		}
+
+		[class^="icon-"], [class*=" icon-"] {
+			display: inline-block;
+		}
+	}
+
+	.alert {
+		word-wrap: break-word;
+	}
+
+	li {
+		line-height: 27px;
+	}
+
+	/* ---------- Dockbar ---------- */
+
+	.dockbar-split {
+		.dockbar {
+			.nav {
+				li.dropdown {
+					> .dropdown-toggle {
+						@extend %dockbar-caret;
+					}
+
+					&.open, &.active, &.open.active {
+						> .dropdown-toggle {
+							background-color: $dockbarOpenGradientStart;
+							color: #FFF;
+
+							@extend %dockbar-caret;
+						}
+					}
+				}
+			}
+
+			.navbar-inner {
+				visibility: hidden;
+
+				.nav > li {
+					background-color: $dockbarGradientStart;
+				}
+
+				.nav-add-controls {
+					background: transparent;
+					border-top-width: 0;
+
+					&.nav-add-controls-notice {
+						top: 70px;
+					}
+
+					> li {
+						background-color: transparent;
+
+						@include background-image(none);
+
+						> a {
+							background: $lightLiferayBlue;
+							line-height: inherit;
+							padding: 6px 8px;
+
+							@include respond-to(phone, tablet) {
+								background: transparent;
+							}
+
+							&:hover {
+								background: darken($lightLiferayBlue, 10%);
+							}
+
+							&.toggle-controls-link {
+								background: $lightGreen;
+
+								@include respond-to(phone, tablet) {
+									background: transparent;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.nav-account-controls {
+			border-top: 1px solid darken($lightLiferayBlue, 15%);
+
+			li ul li a:hover i {
+				background-image: none;
+				text-decoration: none;
+			}
+		}
+
+		&.dockbar-ready .dockbar .navbar-inner {
+			visibility: visible;
+		}
+	}
+
+	.dockbar {
+		&.navbar .navbar-inner {
+			min-height: 40px;
+		}
+
+		.navbar-inner {
+			background-color: $dockbarGradientStart;
+
+			@include background-image(linear-gradient($dockbarGradientStart 0%, $dockbarGradientStart 47%, $dockbarGradientEnd 100%));
+
+			.nav {
+				> li {
+					background-color: $dockbarGradientStart;
+
+					@include background-image(linear-gradient($dockbarGradientStart 0%, $dockbarGradientStart 47%, $dockbarGradientEnd 100%));
+				}
+			}
+
+			.container .btn-navbar {
+				color: #FFF;
+
+				.user-avatar-image {
+					position: relative;
+					top: 2px;
+					width: 28px;
+				}
+			}
+		}
+
+		.nav {
+			> li {
+				background: $dockbarGradientStart;
+
+				@include background-image(linear-gradient($dockbarGradientStart 0%, $dockbarGradientStart 47%, $dockbarGradientEnd 100%));
+
+				> a {
+					color: #FFF;
+					line-height: 31px;
+					margin: 0 5px 0 0;
+					padding: 6px 10px;
+
+					&:focus, &:hover {
+						color: #FFF;
+					}
+
+					&:hover {
+						background-color: $standarLiferayBlue;
+					}
+
+					[class^="icon-"], [class*=" icon-"] {
+						margin-top: 3px;
+					}
+				}
+
+				&.active > a {
+					color: #FFF;
+
+					&, &:hover, &:focus {
+						background: darken($dockbarGradientEnd, 10%);
+					}
+				}
+
+				&.open .dropdown-toggle {
+					background-color: $dockbarOpenGradientStart;
+
+					@include background-image(linear-gradient($dockbarOpenGradientStart, $dockbarOpenGradientEnd));
+					@include box-shadow(none);
+				}
+			}
+
+			%dockbar-caret {
+				&, &:hover {
+					.caret {
+						border-bottom-color: #FFF;
+						border-top-color: #FFF;
+					}
+				}
+			}
+
+			li.dropdown {
+				> .dropdown-toggle {
+					@extend %dockbar-caret;
+				}
+
+				&.open, &.active, &.open.active {
+					> .dropdown-toggle {
+						background-color: $dockbarGradientEnd;
+						color: #FFF;
+
+						@extend %dockbar-caret;
+					}
+				}
+
+				.dropdown-menu, .site-administration-menu {
+					background: $standarLiferayBlue;
+					border-width: 0;
+					left: 0;
+					margin: 0;
+					right: auto;
+
+					> li > a {
+						color: #FFF;
+						font-size: 0.9em;
+						font-weight: 300;
+
+						&:focus, &:hover {
+							background: lighten($standarLiferayBlue, 20%);
+							@include filter-gradient($dockbarOpenGradientStart, $dockbarOpenGradientEnd, vertical);
+						}
+
+						[class^="icon-"], [class*=" icon-"] {
+							margin-right: 3px;
+						}
+
+						.icon-spacer {
+							margin-right: 17px;
+						}
+					}
+
+					li.active > a {
+						background: $dockbarGradientEnd;
+					}
+				}
+
+				.dropdown-menu {
+					max-height: 300px;
+					overflow-x: hidden;
+					overflow-y: auto;
+
+					&:after, &:before {
+						border-width: 0;
+					}
+				}
+			}
+
+			li.dropdown.user-avatar {
+				.dropdown-menu {
+					left: auto;
+					right: 0;
+				}
+			}
+		}
+
+		.divider-vertical {
+			border-left-color: #222;
+			border-right-color: $standarGrey;
+			display: none;
+		}
+	}
+
+	.app-view-taglib .lfr-header-row-content .select-all-entries {
+		left: 7px;
+		top: 14px;
+	}
+
+	.navbar {
+		.btn-group, .navbar-search {
+			margin-bottom: 8px;
+			margin-top: 8px;
+		}
+
+		.btn-navbar {
+			padding: 10px;
+		}
+
+		.container .btn-navbar {
+			background: transparent;
+			border-color: #DDD;
+
+			&:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
+				background-color: #DDD;
+			}
+
+			.icon-bar {
+				background: #656565;
+			}
+		}
+
+		.icon-caret-down {
+			background: $lightLiferayBlue;
+			background: rgba(255, 255, 255, 0.2);
+			font-size: 14px;
+			height: auto;
+			margin-left: 5px;
+			padding: 1px 4px;
+			width: auto;
+		}
+
+		.nav > li.open > a {
+			background-color: #FFF;
+			color: $standarGrey;
+			text-decoration: none;
+		}
+
+		.navbar-inner {
+			min-height: 47px;
+		}
+	}
+
+	/* ---------- Nav#Navigation ---------- */
+
+	.modify-pages .delete-tab {
+		background: $standarGrey;
+		border: 2px solid #FFF;
+		color: #FFF;
+		font-size: 16px;
+		padding: 4px;
+		right: -10px;
+		top: 0;
+		z-index: 300;
+
+		&:hover {
+			@include box-shadow(0 1px 1px -1px #000)
+		}
+	}
+
+	/* ---------- Extras ---------- */
+
+	$prefixes: ("-webkit-", "-moz-", "-o-", "");
+
+	@each $prefix in $prefixes {
+		::#{$prefix}selection {
+			background: #2AAAE6 !important;
+			color: #FFF;
+
+			@include text-shadow(-1px -1px rgba(0, 0, 0, 0.3));
+		}
+	}
+
+	.modify-pages .delete-tab {
+		@include border-radius(50%);
+		@include text-shadow(none);
+	}
+
+	input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="number"], input[type="password"], input[type="text"], input[type="time"], input[type="week"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], textarea, .uneditable-input {
+		@include border-radius(0);
+		@include box-shadow(none);
+
+		&:focus {
+			@include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6));
+		}
+	}
+
+	.tagselector-focused .tagselector-content .textboxlistentry-holder {
+		@include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6));
+	}
+
+	.dockbar {
+		.nav {
+			> li {
+				> a {
+					@include text-shadow(none);
+				}
+			}
+
+			li.dropdown {
+				.dropdown-menu {
+					@include border-radius(0);
+				}
+			}
+		}
+
+		.container .btn, .nav li.dropdown.user-avatar {
+			.user-avatar-image {
+				@include border-radius(50%);
+				@include box-shadow(0 0 0 2px $dockbarOpenGradientEnd);
+			}
+		}
+	}
+
+	.navbar {
+		.container .btn {
+			&, .icon-bar {
+				@include box-shadow(0 1px 0 #FFF);
+			}
+		}
+
+		.icon-caret-down {
+			@include border-radius(50%);
+		}
+
+		.nav {
+			> li.open > a {
+				@include box-shadow(inset 0 3px 8px rgba(0, 0, 0, 0.125));
+			}
+		}
+	}
+
+	.dockbar .container .btn {
+		@include box-shadow(none);
+	}
+
+	.dockbar-user-notifications {
+		.dropdown-toggle .user-notifications-count {
+			background-color: darken($dockbarGradientEnd, 10%);
+			border: 1px solid darken($dockbarGradientEnd, 10%);
+		}
+
+		.user-notifications-header {
+			border-bottom: 1px solid darken($dockbarGradientEnd, 10%);
+		}
+	}
+
+	body.yui3-skin-sam .yui3-widget-mask {
+		@include opacity(0.8);
+	}
+
+	&.ie {
+		.dockbar, #navigation {
+			.navbar-inner {
+				filter: none;
+			}
+		}
+	}
+}
+
+/* ---------- Responsive Styles ---------- */
+
+@include respond-to(phone, tablet) {
+	.aui {
+		* {
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		}
+
+		#heading {
+			bottom: 100%;
+			margin-top: -2em;
+			position: relative;
+
+			.site-title {
+				font-size: 26px;
+
+				img {
+					width: 35px;
+				}
+			}
+		}
+
+		#navigation {
+			display: none;
+
+			&.open {
+				display: block;
+
+				.navbar-inner {
+					padding: 10px;
+
+					@include border-radius(3px);
+
+					.nav-collapse {
+						height: auto;
+						overflow: visible;
+					}
+				}
+			}
+
+			.nav {
+				margin: 0;
+			}
+		}
+
+		.dockbar-split .dockbar, .dockbar {
+			float: right;
+			height: auto;
+			position: relative;
+			z-index: 401;
+
+			.info-items {
+				height: auto;
+				position: static;
+				width: 300px;
+			}
+
+			.dockbar-user-notifications .dropdown-toggle .user-notifications-count {
+				display: inline;
+			}
+
+			.navbar-inner {
+				width: auto;
+
+				.btn-navbar {
+					background: transparent;
+					border: 0 $dockbarOpenGradientEnd;
+					float: left;
+					font-size: 24px;
+					padding: 12px 15px;
+
+					&:hover {
+						background-color: $dockbarOpenGradientEnd;
+					}
+
+					&.open {
+						background-color: $activeResponsiveMenu;
+					}
+				}
+
+				.nav-account-controls {
+					padding: 0 5px;
+
+					.user-avatar-image {
+						display: none;
+					}
+				}
+
+				.nav-add-controls {
+					background: transparent;
+					border-top-width: 0;
+					padding: 0 5px;
+					position: static;
+					z-index: 350;
+
+					> li {
+						float: none;
+						margin: 0;
+						position: relative;
+
+						&.toggle-controls a {
+							clip: rect(auto auto auto auto);
+							position: static;
+							visibility: visible;
+						}
+
+						.page-preview-controls {
+							display: none;
+						}
+
+						> a {
+							background: transparent;
+							text-align: left;
+							white-space: nowrap;
+
+							&:hover {
+								background: #F3F3F3;
+							}
+
+							[class^="icon-"], [class^="icon-"], [class*=" icon-"] {
+								font-size: 22px;
+								margin-top: 0;
+							}
+
+							&.toggle-controls-link {
+								background: transparent;
+
+								[class^="icon-"], [class^="icon-"], [class*=" icon-"] {
+									color: #FFF;
+								}
+							}
+
+							.nav-item-label {
+								background: transparent;
+								display: inline;
+								left: 0;
+								margin-left: 0;
+								margin-top: 0;
+								padding: 0;
+								position: relative;
+							}
+
+							&:hover .nav-item-label {
+								display: inline;
+							}
+
+							.icon-caret-down {
+								display: none;
+							}
+						}
+					}
+				}
+
+				.nav-collapse {
+					z-index: 400;
+
+					&.open {
+						overflow: visible;
+					}
+
+					> .nav {
+						background: $standarLiferayBlue;
+						border-width: 0;
+						left: auto;
+						margin: 0;
+						min-width: 160px;
+						position: absolute;
+						right: 0;
+						z-index: 400;
+
+						> li {
+							&.dropdown {
+								.dropdown-menu li a {
+									font-size: 16px;
+									line-height: 32px;
+								}
+
+								&.open {
+									> .dropdown-toggle {
+										background-color: lighten($standarLiferayBlue, 20%);
+										color: #FFF;
+									}
+								}
+							}
+
+							> a {
+								color: #FFF;
+								font-size: 16px;
+								margin: 5px 0;
+								padding: 6px 15px;
+
+								&:focus, &:hover {
+									background: lighten($standarLiferayBlue, 20%);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.portlet-dockbar {
+			display: inline-block;
+			width: 100%;
+		}
+
+		.signed-out #_145_navAddControlsNavbarBtn {
+			display: none;
+		}
+	}
+}

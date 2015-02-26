@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 6.2.0//EN" "http://www.liferay.com/dtd/liferay-look-and-feel_6_2_0.dtd">
+
+<look-and-feel>
+	<compatibility>
+		<version>6.2.0+</version>
+	</compatibility>
+	<theme id="lateral-nav-theme" name="Lateral Navigation Theme">
+		<settings>
+			<setting configurable="true" key="dockbar-mode" type="select" options="normal,split" value="normal" />
+			<setting configurable="true" key="portlet-setup-show-borders-default" type="checkbox" value="false" />
+			<setting configurable="true" key="breadcrumbs" type="checkbox" value="true" />
+			<setting configurable="true" key="navigation" type="select" options="left,right" value="right" />
+			<setting configurable="true" key="logo-menu-direction" type="select" options="left-right,right-left" value="left-right" />
+			<setting configurable="true" key="footer-web-content-article-id" type="text" value="" />
+		</settings>
+	</theme>
+</look-and-feel>
+
+

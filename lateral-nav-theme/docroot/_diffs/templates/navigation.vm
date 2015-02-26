@@ -1,0 +1,67 @@
+<span class="back-nav"></span>
+<nav class="$nav_css_class" id="navigation" role="navigation">
+	<ul aria-label="#language ("site-pages")" role="menubar">
+		#set ($breadcrumbs = $theme.getSetting("breadcrumbs"))
+
+		#if ($breadcrumbs == true)
+			<nav id="breadcrumbs">#breadcrumbs()</nav>
+		#end
+
+		#foreach ($nav_item in $nav_items)
+			#set ($nav_item_attr_has_popup="")
+			#set ($nav_item_attr_selected="")
+			#set ($nav_item_css_class = "")
+
+			#if ($nav_item.isSelected())
+				#set ($nav_item_attr_selected="aria-selected='true'")
+				#set ($nav_item_css_class = "selected")
+			#end
+
+			#if ($nav_item.hasChildren())
+				#set ($nav_item_attr_has_popup="aria-haspopup='true'")
+			#end
+			<li class="$nav_item_css_class" id="layout_$nav_item.getLayoutId()" $nav_item_attr_selected role="presentation">
+				<a aria-labelledby="layout_$nav_item.getLayoutId()" href="$nav_item.getURL()" $nav_item_attr_has_popup $nav_item.getTarget() role="menuitem"><span>$nav_item.icon() $nav_item.getName()</span></a>
+
+				#if ($nav_item.hasChildren())
+					<ul class="child-menu" role="menu">
+						#foreach ($nav_child in $nav_item.getChildren())
+							#set ($nav_child_attr_selected="")
+							#set ($nav_child_css_class = "false")
+
+							#if ($nav_child.isSelected())
+								#set ($nav_child_attr_selected="aria-selected='true'")
+								#set ($nav_child_css_class = "selected")
+							#end
+
+							<li class="$nav_child_css_class" id="layout_$nav_child.getLayoutId()" $nav_child_attr_selected role="presentation">
+								<a aria-labelledby="layout_$nav_child.getLayoutId()" href="$nav_child.getURL()" $nav_child.getTarget() role="menuitem">$nav_child.getName()</a>
+							</li>
+						#end
+					</ul>
+				#end
+			</li>
+		#end
+	</ul>
+	<ul>
+
+		#if ($is_signed_in)
+			#set ($main_menu_style = "style='background-image: url($user.getPortraitURL($themeDisplay)); background-size: cover; width: 25px; height: 25px; display: inline-block; vertical-align: middle; margin-right: 6px; float:left;'")
+			<hr></hr>
+			<li class="sign-out-button" id="signOutLink">
+				<span class="img-circle" $main_menu_style></span>
+				<a href="$sign_out_url?referer=$themeDisplay.getURLCurrent()"><small>$sign_out_text</small></a>
+			</li>
+		#else
+			<hr></hr>
+			<li role="presentation">
+				<a href="$sign_in_url" class="sign-in" rel="nofollow" role="menuitem"><small>$sign_in_text</small></a>
+			</li>
+			<li role="presentation">
+				<a href="$portalUtil.getCreateAccountURL($request, $themeDisplay)">
+					<small>#language ("register")</small>
+				</a>
+			</li>
+		#end
+	</ul>
+</nav>

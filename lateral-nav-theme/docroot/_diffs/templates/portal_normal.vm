@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html class="$root_css_class" dir="#language ("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$the_title - $company_name</title>
+
+	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+
+	$theme.include($top_head_include)
+</head>
+
+#set ($dockbar = $theme.getSetting("dockbar-mode"))
+
+#if ($dockbar == "split")
+	#set ($css_class = "${css_class} dockbar-split")
+#end
+
+#set ($navigationLeft = $theme.getSetting("navigation"))
+
+#if ($navigationLeft == "left")
+	#set ($css_class = "${css_class} navigation-left")
+#end
+
+<body class="$css_class">
+
+<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
+
+$theme.include($body_top_include)
+
+#if ($is_signed_in)
+	#dockbar()
+#end
+
+#set ($navigationLeft = $theme.getSetting("logo-menu-direction"))
+
+#if ($navigationLeft == "left-right")
+	#set ($pull1 = "")
+	#set ($pull2 = "pull-right")
+#else
+	#set ($pull1 = "pull-right")
+	#set ($pull2 = "")
+#end
+
+<div class="container-fluid" id="wrapper">
+	<header id="banner" role="banner">
+		<div id="heading">
+			<h1 class="site-title $pull1">
+				<a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
+					<img alt="$logo_description" height="50" src="$site_logo" width="auto" />
+				</a>
+			</h1>
+			<div class="navigation-menu $pull2">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+		</div>
+	</header>
+
+	#if ($has_navigation || $is_signed_in)
+		#parse ("$full_templates_path/navigation.vm")
+	#end
+
+	<div id="content">
+		#if ($selectable)
+			$theme.include($content_include)
+		#else
+			$portletDisplay.recycle()
+
+			$portletDisplay.setTitle($the_title)
+
+			$theme.wrapPortlet("portlet.vm", $content_include)
+		#end
+	</div>
+
+	<footer id="footer" role="contentinfo">
+		#set ($footerContent = $theme.getSetting("footer-web-content-article-id"))
+
+		#if (($footerContent!=""))
+			$theme.journalArticle($footerContent, $themeDisplay.getSiteGroupId(), "")
+		#else
+			<p class="container powered-by">
+				by: Marcos Castro <a href="https://github.com/marcoscv-work/experimental-liferay-themes" rel="external">github repository</a>
+			</p>
+		#end
+	</footer>
+</div>
+
+$theme.include($body_bottom_include)
+
+$theme.include($bottom_include)
+
+</body>
+
+</html>
