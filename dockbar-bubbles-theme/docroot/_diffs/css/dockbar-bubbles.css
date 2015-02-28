@@ -1,0 +1,290 @@
+@import "compass";
+@import "compass/css3/user-interface";
+@import "mixins";
+
+$dockbarMaCWidth: 60px;
+$dockbarMaCiconWidth: 40px;
+$backgroundSolidColor: #118ADE;
+$buttonsRadius: 50%;
+
+%navbar-item-style {
+	background: $backgroundSolidColor;
+	border: none;
+	color: #FFF;
+	font-size: 20px;
+	height: $dockbarMaCiconWidth;
+	line-height: 40px;
+	margin: 10px 0 0 10px;
+	padding: 0;
+	text-align: center;
+	width: $dockbarMaCiconWidth;
+
+	@include border-radius($buttonsRadius);
+	@include transition(all 0.3s ease-in-out);
+
+	&:hover {
+		background: darken($backgroundSolidColor, 20%);
+	}
+}
+
+.aui {
+	.dockbar-bubbles {
+		.portlet-dockbar {
+			.navbar.dockbar {
+				background: rgba(255, 255, 255, 0.3);
+				height: 100%;
+				position: fixed;
+				width: $dockbarMaCWidth;
+				padding: 0;
+				z-index: 350;
+
+				.navbar-inner {
+					background: inherit;
+					border: 0;
+					box-shadow: none;
+					padding: 0;
+				}
+
+				@include transition(all 0.3s ease-in-out);
+
+				.container .nav-collapse {
+					padding: 0;
+
+					&>ul {
+						padding: 0;
+						margin: 0;
+
+						&>li {
+							display: block;
+							float: none;
+							min-width: inherit;
+
+							&>a {
+								@extend %navbar-item-style;
+							}
+
+							&.open>a {
+								background-color: darken($backgroundSolidColor, 20%);
+							}
+
+							.nav-item-icon {
+								display: inline-block;
+							}
+
+							.icon-caret-down, .nav-item-label {
+								display: none;
+							}
+
+							&>.dropdown-menu {
+								background: #FFF;
+								border: 1px solid #CCC;
+								left: $dockbarMaCWidth;
+								margin: 0;
+								position: absolute;
+								top: 0;
+
+								&:before, &:after {
+									display: none;
+								}
+							}
+						}
+					}
+
+					&>ul:nth-child(3)>li>.dropdown-menu {
+						bottom: 0;
+						left: $dockbarMaCWidth;
+						right: inherit;
+						top: inherit;
+					}
+
+					ul.nav-navigation {
+						display: none;
+					}
+
+					ul.nav-add-controls {
+						width: ($dockbarMaCWidth*4);
+
+						li {
+							float: left;
+
+							a {
+								@extend %navbar-item-style;
+							}
+						}
+
+						ul.dropdown-menu {
+							min-width: inherit;
+							padding: 0;
+						}
+					}
+
+					/* nav-account-controls */
+
+					ul.nav-account-controls {
+						background: none;
+						float: left;
+
+						.admin-links {
+							.dropdown-menu {
+								li .nav-item-label {
+									display: inline-block;
+								}
+							}
+
+							&>a:before {
+								-webkit-font-smoothing: antialiased;
+								content: "\f013";
+								font-family: 'fontawesome-alloy';
+							}
+						}
+
+						.my-sites {
+							&>a:before {
+								-webkit-font-smoothing: antialiased;
+								content: "\f0ac";
+								font-family: 'fontawesome-alloy';
+							}
+						}
+
+						.user-notification-link {
+							background: transparent;
+							border: 0;
+							font-size: 12px;
+							height: 20px;
+							left: 35px;
+							line-height: 20px;
+							margin: 0;
+							padding: 0;
+							position: absolute;
+							text-align: center;
+							top: 35px;
+							width: 20px;
+							z-index: 1;
+
+							@include opacity(1);
+
+							.user-notifications-count {
+								background: red;
+								border-width: 0;
+								color: #FFF;
+								display: block;
+								text-align: center;
+
+								@include border-radius($buttonsRadius);
+							}
+						}
+
+						li.dropdown.dockbar-user-notifications .dropdown-menu {
+							left: $dockbarMaCWidth;
+							top: 0;
+						}
+
+						.user-avatar {
+							&>.dropdown-menu {
+								left: $dockbarMaCWidth;
+								right: inherit;
+							}
+
+							.user-full-name {
+								display: none;
+							}
+
+							.user-avatar-link {
+								overflow: hidden;
+								padding: 0;
+							}
+
+							.user-avatar-image {
+								background-size: cover;
+								display: inline-block;
+								height: 42px;
+								width: 42px;
+							}
+
+							.nav-item-label {
+								display: inline-block;
+							}
+						}
+
+						.my-sites-menu .site-type {
+							left: 100%;
+							margin: 0 5px 0;
+							right: inherit;
+						}
+
+						.divider-vertical {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.dockbar-bubbles.over {
+		.portlet-dockbar {
+			.navbar.dockbar {
+				background: none;
+
+				.container {
+					&>ul>li>a, .nav-collapse>ul>li>a {
+						margin-top: -$dockbarMaCiconWidth;
+						margin-right: -$dockbarMaCiconWidth;
+
+						@include opacity(0);
+						@include transition(all 0.4s ease-in-out);
+					}
+
+					.nav-collapse>ul>li.user-avatar {
+						&>a.user-avatar-link {
+							margin-top: 10px;
+							margin-right: 10px;
+
+							@include opacity(1);
+						}
+
+						.dropdown-menu {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@include respond-to(phone, tablet) {
+		.dockbar-bubbles .portlet-dockbar .navbar.dockbar .navbar-inner .container {
+			&>a {
+				display: none;
+			}
+
+			#_145_navAccountControlsNavbarCollapse, #_145_navAddControlsNavbarCollapse {
+				display: block;
+				overflow: visible;
+				height: auto;
+			}
+
+			.dockbar-user-notifications-container {
+				left: 40px;
+				position: absolute;
+				border: 1px solid #CCC;
+			}
+
+			.dockbar-user-notifications, .page-preview-controls {
+				display: none;
+			}
+		}
+
+		.lfr-has-add-content, .lfr-has-edit-layout {
+			.portlet-dockbar {
+				display: none;
+			}
+		}
+	}
+
+	@include respond-to(phone) {
+		.dockbar-bubbles .portlet-dockbar .navbar.dockbar {
+			left: 20px;
+		}
+	}
+}
