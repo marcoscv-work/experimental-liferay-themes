@@ -2,13 +2,21 @@
 
 These themes are not official Liferay themes.
 
-You can find here the next themes:
+You can find here the next **Liferay 6.2+ themes**:
 
-## [dockbar-clasic-theme](https://github.com/marcoscv-work/experimental-liferay-themes/tree/master/dockbar-classic-theme)
+## [dockbar-classic-theme](https://github.com/marcoscv-work/experimental-liferay-themes/tree/master/dockbar-classic-theme)
 
 
 * Classic dockbar over your _styled liferay theme
 * You will be able to change dockbar colors easier
+
+## [dockbar-bubbles-theme](https://github.com/marcoscv-work/experimental-liferay-themes/tree/master/dockbar-bubbles-theme)
+
+
+* New bubbles dockbar over your _styled liferay theme
+* You will be able to configure colors and sizes from bubbles icons
+
+![alt tag](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/previews/bubbles-dockbar-theme.gif)
 
 ## [dockbar-vertical-theme](https://github.com/marcoscv-work/experimental-liferay-themes/tree/master/dockbar-vertical-theme)
 
