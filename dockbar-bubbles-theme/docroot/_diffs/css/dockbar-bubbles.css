@@ -2,10 +2,10 @@
 @import "compass/css3/user-interface";
 @import "mixins";
 
-$dockbarMaCWidth: 60px;
-$dockbarMaCiconWidth: 40px;
 $backgroundSolidColor: #118ADE;
 $buttonsRadius: 50%;
+$dockbarMaCiconWidth: 40px;
+$dockbarMaCWidth: 60px;
 
 %navbar-item-style {
 	background: $backgroundSolidColor;
@@ -33,9 +33,9 @@ $buttonsRadius: 50%;
 			.navbar.dockbar {
 				background: rgba(255, 255, 255, 0.3);
 				height: 100%;
+				padding: 0;
 				position: fixed;
 				width: $dockbarMaCWidth;
-				padding: 0;
 				z-index: 350;
 
 				.navbar-inner {
@@ -51,8 +51,8 @@ $buttonsRadius: 50%;
 					padding: 0;
 
 					&>ul {
-						padding: 0;
 						margin: 0;
+						padding: 0;
 
 						&>li {
 							display: block;
@@ -228,8 +228,8 @@ $buttonsRadius: 50%;
 
 				.container {
 					&>ul>li>a, .nav-collapse>ul>li>a {
-						margin-top: -$dockbarMaCiconWidth;
 						margin-right: -$dockbarMaCiconWidth;
+						margin-top: -$dockbarMaCiconWidth;
 
 						@include opacity(0);
 						@include transition(all 0.4s ease-in-out);
@@ -237,8 +237,8 @@ $buttonsRadius: 50%;
 
 					.nav-collapse>ul>li.user-avatar {
 						&>a.user-avatar-link {
-							margin-top: 10px;
 							margin-right: 10px;
+							margin-top: 10px;
 
 							@include opacity(1);
 						}
@@ -260,14 +260,14 @@ $buttonsRadius: 50%;
 
 			#_145_navAccountControlsNavbarCollapse, #_145_navAddControlsNavbarCollapse {
 				display: block;
-				overflow: visible;
 				height: auto;
+				overflow: visible;
 			}
 
 			.dockbar-user-notifications-container {
+				border: 1px solid #CCC;
 				left: 40px;
 				position: absolute;
-				border: 1px solid #CCC;
 			}
 
 			.dockbar-user-notifications, .page-preview-controls {
