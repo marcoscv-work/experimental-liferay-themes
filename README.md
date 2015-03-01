@@ -3,6 +3,7 @@
 These themes are not official Liferay themes.
 
 You can find here the next **Liferay 6.2+ themes**:
+(If you prefer test the themes can download them on '.war' format for directly deploy in directory '[WARs](https://github.com/marcoscv-work/experimental-liferay-themes/tree/master/WARs)')
 
 ## [dockbar-classic-theme](https://github.com/marcoscv-work/experimental-liferay-themes/tree/master/dockbar-classic-theme)
 
@@ -15,6 +16,7 @@ You can find here the next **Liferay 6.2+ themes**:
 
 * New bubbles dockbar over your _styled liferay theme
 * You will be able to configure colors and sizes from bubbles icons
+* Compatible with IE8+
 
 ![alt tag](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/previews/bubbles-dockbar-theme.gif)
 
