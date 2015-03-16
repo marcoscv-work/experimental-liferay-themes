@@ -31,7 +31,6 @@ $dockbarMaCWidth: 60px;
 	.dockbar-bubbles {
 		.portlet-dockbar {
 			.navbar.dockbar {
-				background: rgba(255, 255, 255, 0.3);
 				height: 100%;
 				padding: 0;
 				position: fixed;
