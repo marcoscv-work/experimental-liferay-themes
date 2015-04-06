@@ -175,6 +175,103 @@ $mainNavbarHeight: 46px;
 	 		padding: 20px 0;
 	 	}
 	}
+
+	/* ---------- Carousel ---------- */
+
+	.component.carousel {
+		line-height: inherit;
+		margin-bottom: 0;
+		overflow: hidden;
+
+		.carousel-item {
+			width: 100%;
+		}
+
+		menu {
+			background: transparent;
+			bottom: 0;
+			height: 10%;
+			left: 0;
+			padding: 0;
+			text-align: center;
+			width: 100%;
+
+			li {
+				display: inline-block;
+				float: none;
+
+				.carousel-menu-item {
+					bottom: 20px;
+				}
+
+				.carousel-menu-prev, .carousel-menu-next {
+					background: url(@theme_image_path@/carousel/prev.png) transparent no-repeat center;
+					bottom: 300%;
+					height: 50px;
+					left: 50px;
+					position: absolute;
+					width: 50px;
+					opacity: 0;
+
+					@include transition(all 0.2s ease-in-out);
+
+					&:hover {
+						@include opacity(0.4);
+						@include transition(all 0.2s ease-in-out);
+					}
+				}
+
+				.carousel-menu-next {
+					background-image: url(@theme_image_path@/carousel/next.png);
+					left: inherit;
+					right: 50px;
+				}
+
+				.carousel-menu-index {
+					background: #FFF;
+					margin: 3px;
+					padding: 1px;
+
+					&.carousel-menu-active {
+						background: transparent;
+						border: 2px solid #FFF;
+						margin: 1px;
+					}
+				}
+
+				.carousel-menu-pause {
+					background-size: cover;
+					border: 2px solid #FFF;
+					display: none;
+					height: 12px;
+					margin: 0 7px;
+					width: 12px;
+				}
+			}
+		}
+
+		&:hover {
+			menu .carousel-menu-prev, .carousel-menu-next {
+				opacity: 1;
+			}
+		}
+	}
+
+	.columns-max {
+		max-width: 1170px;
+		margin: 0 auto;
+	}
+
+	/* ---------- dockbar vertical ---------- */
+	.dockbar-vertical {
+		.icon-toggle-dockbar {
+			z-index: 9;
+		}
+
+		.portlet-dockbar .navbar {
+			z-index: 10;
+		}
+	}
 }
 
 /* ---------- Responsive ---------- */
