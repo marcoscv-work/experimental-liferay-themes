@@ -5,16 +5,141 @@
 	<compatibility>
 		<version>6.2.0+</version>
 	</compatibility>
-	<theme id="manzanita-theme" name="Manzanita Theme">
+	<theme id="manzanita" name="Manzanita Theme">
 		<settings>
 			<setting configurable="true" key="dockbar-vertical" type="checkbox" value="true" />
 			<setting configurable="true" key="portlet-setup-show-borders-default" type="checkbox" value="false" />
 			<setting configurable="true" key="custom-logo" type="checkbox" value="false" />
+
+			<setting configurable="true" type="text" key="navigation-color" value="">
+				<![CDATA[
+					AUI().ready(
+						'aui-color-picker-popover',
+						function(A) {
+							var AllControls = A.all("#regularlayoutsAdminLookAndFeelSettingsPanelContent .control-group");
+							AllControls.setStyle('marginBottom', '5px');
+
+							var selectObj = A.one("#[@NAMESPACE@]navigation-color");
+
+							var selectObjText = A.one("#[@NAMESPACE@]navigation-text-color");
+							selectObj.ancestor().setStyle('float', 'left');
+							selectObj.ancestor().setStyle('marginRight', '10px');
+
+							selectObj.setStyle('width', '68px');
+							selectObj.setStyle('borderLeftWidth', '30px');
+							selectObj.setStyle('borderLeftColor', selectObj.get('value'));
+							selectObjText.setStyle('background', selectObj.get('value'));
+
+							var colorPicker = new A.ColorPickerPopover({
+						        trigger: selectObj,
+						        zIndex: 99
+							}).render();
+
+							colorPicker.on('select', function(event) {
+								var color = event.color;
+								event.trigger.set('value', color);
+								selectObj.setStyle('borderLeftColor', color);
+								selectObjText.setStyle('background', color);
+							});
+						}
+					);
+				]]>
+			</setting>
+			<setting configurable="true" type="text" key="navigation-text-color" value="">
+				<![CDATA[
+					AUI().ready(
+						'aui-color-picker-popover',
+						function(A) {
+							var selectObj = A.one("#[@NAMESPACE@]navigation-text-color");
+							selectObj.setStyle('width', '68px');
+							selectObj.setStyle('borderLeftWidth', '30px');
+							selectObj.setStyle('borderLeftColor', selectObj.get('value'));
+							selectObj.setStyle('color', selectObj.get('value'));
+
+							var colorPicker = new A.ColorPickerPopover({
+						        trigger: selectObj,
+						        zIndex: 99
+							}).render();
+
+							colorPicker.on('select', function(event) {
+								var color = event.color;
+								event.trigger.set('value', color);
+								selectObj.setStyle('borderLeftColor', color);
+								selectObj.setStyle('color', color);
+							});
+						}
+					);
+				]]>
+			</setting>
+
+			<setting configurable="true" type="text" key="footer-color" value="">
+				<![CDATA[
+					AUI().ready(
+						'aui-color-picker-popover',
+						function(A) {
+							var selectObj = A.one("#[@NAMESPACE@]footer-color");
+
+							var selectObjText = A.one("#[@NAMESPACE@]footer-text-color");
+							selectObj.ancestor().setStyle('float', 'left');
+							selectObj.ancestor().setStyle('marginRight', '10px');
+
+							selectObj.setStyle('width', '68px');
+							selectObj.setStyle('borderLeftWidth', '30px');
+							selectObj.setStyle('borderLeftColor', selectObj.get('value'));
+							selectObjText.setStyle('background', selectObj.get('value'));
+
+							var colorPicker = new A.ColorPickerPopover({
+						        trigger: selectObj,
+						        zIndex: 99
+							}).render();
+
+							colorPicker.on('select', function(event) {
+								var color = event.color;
+								event.trigger.set('value', color);
+								selectObj.setStyle('borderLeftColor', color);
+								selectObjText.setStyle('background', color);
+							});
+						}
+					);
+				]]>
+			</setting>
+			<setting configurable="true" type="text" key="footer-text-color" value="">
+				<![CDATA[
+					AUI().ready(
+						'aui-color-picker-popover',
+						function(A) {
+							var selectObj = A.one("#[@NAMESPACE@]footer-text-color");
+							selectObj.setStyle('width', '68px');
+							selectObj.setStyle('borderLeftWidth', '30px');
+							selectObj.setStyle('borderLeftColor', selectObj.get('value'));
+							selectObj.setStyle('color', selectObj.get('value'));
+
+							var colorPicker = new A.ColorPickerPopover({
+						        trigger: selectObj,
+						        zIndex: 99
+							}).render();
+
+							colorPicker.on('select', function(event) {
+								var color = event.color;
+								event.trigger.set('value', color);
+								selectObj.setStyle('borderLeftColor', color);
+								selectObj.setStyle('color', color);
+							});
+
+							var pikers = A.all(".yui3-color-picker-popover");
+							pikers.setStyle('width', '280px');
+						}
+					);
+				]]>
+			</setting>
+
 			<setting configurable="true" key="space-between-header" type="select" options="none,below,normal" value="none" />
 			<setting configurable="true" key="footer-web-content-article-id" type="text" value="" />
-			<setting configurable="true" key="main-container-fluid" type="checkbox" value="false" />
+			<setting configurable="true" key="main-container-fluid" type="checkbox" value="true" />
 			<setting configurable="true" key="header-max-width" type="text" value="" />
 			<setting configurable="true" key="footer-max-width" type="text" value="" />
+
+
 		</settings>
 	</theme>
 </look-and-feel>

@@ -10,7 +10,36 @@
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 
 	$theme.include($top_head_include)
+
+	#set ($navigationColor = $theme.getSetting("navigation-color"))
+	#set ($navigationTextColor = $theme.getSetting("navigation-text-color"))
+	#set ($footerColor = $theme.getSetting("footer-color"))
+	#set ($footerTextColor = $theme.getSetting("footer-text-color"))
+
+	#if (($navigationColor!="") || ($navigationTextColor!="") || ($footerColor!="") || ($footerTextColor!=""))
+		<style>
+		#if (($navigationColor!="") || ($navigationTextColor!=""))
+			.aui #banner {
+				background: $navigationColor;
+				color: $navigationTextColor;
+			}
+			.aui #banner a {
+				color: $navigationTextColor;
+			}
+		#end
+		#if (($footerColor!="") || ($footerTextColor!=""))
+			.aui #footer {
+				background: $footerColor;
+				color: $footerTextColor;
+			}
+			.aui #footer a {
+				color: $footerTextColor;
+			}
+		#end
+		</style>
+	#end
 </head>
+
 
 #set ($dockbarVertical = $theme.getSetting("dockbar-vertical"))
 
