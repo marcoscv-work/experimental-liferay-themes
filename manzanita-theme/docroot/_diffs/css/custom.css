@@ -103,6 +103,10 @@ $mainNavbarHeight: 46px;
 					font-size: 110%;
 					font-weight: 300;
 				}
+
+				&.selected a {
+					opacity: 0.7;
+				}
 	 		}
 
 	 		#sign-in {
