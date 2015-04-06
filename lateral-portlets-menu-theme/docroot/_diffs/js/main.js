@@ -55,7 +55,7 @@ AUI().ready(
 		portletsIndex = A.one('.portletsIndex ul');
 
 		// Node portlets on screen selector, to decide if create lateral index navigation
-		var allPortletsNodes = A.all('#column-1 .portlet-boundary');
+		var allPortletsNodes = A.all('#column-1>div>.portlet-boundary');
 		var allPortletsNodesSize = allPortletsNodes.size();
 
 		// Theme setting add class to show styles
