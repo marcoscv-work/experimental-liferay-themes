@@ -1,0 +1,153 @@
+@import "compass";
+@import "compass/css3/transform";
+@import "compass/css3/user-interface";
+@import "mixins";
+
+.aui {
+	.carousel-container {
+		.carousel-item {
+			img {
+				max-width: inherit;
+	  			width: 100%;
+			}
+
+			.carousel-text {
+				background: rgba(0,0,0,0.4);
+				color: #FFF;
+				bottom: 20%;
+				padding: 10px 10% 20px;
+				position: absolute;
+				text-align: center;
+				width: 80%;
+
+				h1, h2, p, a {
+					@include transition(all 0.2s ease-in-out);
+
+					opacity: 0;
+					margin-top: -10px;
+				}
+
+				hr {
+					border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+					border-top: 0;
+					margin: 20px 30%;
+					width: 40%;
+				}
+			}
+		}
+
+		.carousel-item.carousel-item-active .carousel-text {
+			h1, h2, p, a {
+				@include transition-delay(0.4s);
+
+				opacity: 1;
+				margin-top: 0;
+			}
+
+			h2 {
+				@include transition-delay(0.6s);
+			}
+
+			p {
+				@include transition-delay(0.7s);
+			}
+
+			a {
+				@include transition-delay(0.8s);
+			}
+		}
+	}
+
+	/* ---------- List styles ---------- */
+
+	.list-container .list-item {
+		display: block;
+		float: left;
+		width: 25%;
+		position: relative;
+		overflow: hidden;
+
+		h1, h2 {
+			-ms-text-overflow: ellipsis;
+			-o-text-overflow: ellipsis;
+			display: inline-block;
+			font-size: 20px;
+			line-height: 1.2;
+			margin: 0 0 3px;
+			max-width: 95%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			vertical-align: top;
+			white-space: nowrap;
+			width: 100%;
+		}
+
+		img {
+			max-width: inherit;
+  			width: 100%;
+		}
+
+		.list-text {
+			@include transition(all 0.4s ease-in-out);
+			@include rotate(-90deg);
+			@include transform-origin(100%);
+
+			display: block;
+			padding: 20px;
+			position: absolute;
+			color: #FFF;
+			background: rgba(0, 0, 0, 0.5);
+			left: 0;
+			right: 0;
+			bottom: -100%;
+		}
+
+		.margins {
+			display: block;
+		}
+
+		&:hover .list-text, &.none .list-text {
+			@include rotate(0);
+
+			bottom: 0
+		}
+	}
+
+	/* ---------- Images bg-fixed ---------- */
+
+	.img-bg-fixed {
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		&.bg-right {
+			background-position: right;
+		}
+
+		&.bg-left {
+			background-position: left;
+		}
+	}
+}
+
+@include respond-to(phone, tablet) {
+	.aui {
+		.list-container .list-item {
+			width: 50% !important;
+
+			.list-text {
+				@include rotate(0);
+				bottom: 0
+			}
+		}
+	}
+}
+
+@include respond-to(phone) {
+	.aui {
+		.list-container .list-item {
+			width: 100% !important;
+		}
+	}
+}
