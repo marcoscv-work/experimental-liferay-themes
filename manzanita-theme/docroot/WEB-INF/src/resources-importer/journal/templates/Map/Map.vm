@@ -1,0 +1,94 @@
+#set ($article_id = $reserved-article-id.getData())
+#set ($content_id = "map-canvas-${article_id}")
+
+#set ($coordinatesMapData = "(40.4111803, -3.693051)")
+#if ($coordinatesMap.data != "")
+	#set ($coordinatesMapData = "("+$coordinatesMap.data+")")
+#end
+
+#set ($mapHeight = "350px")
+#if ($styleMapOptions.mapHeight.data != "")
+	#set ($mapHeight = $styleMapOptions.mapHeight.data)
+#end
+
+#set ($mapMarginTop = "0")
+#if ($styleMapOptions.mapHeight.mapMarginTop.data != "")
+	#set ($mapMarginTop = $styleMapOptions.mapHeight.mapMarginTop.data)
+#end
+
+#set ($mapMarginDown = "0")
+#if ($styleMapOptions.mapHeight.mapMarginDown.data != "")
+	#set ($mapMarginDown = $styleMapOptions.mapHeight.mapMarginDown.data)
+#end
+
+#set ($mapVisibility = "simplified")
+#if ($styleMapOptions.mapVisibility.data != "")
+	#set ($mapVisibility = $styleMapOptions.mapVisibility.data)
+#end
+
+#set ($weight = "5")
+#if ($styleMapOptions.weight.data != "")
+	#set ($weight = $styleMapOptions.weight.data)
+#end
+
+#set ($saturation = "-20")
+#if ($styleMapOptions.saturation.data != "")
+	#set ($saturation = $styleMapOptions.saturation.data)
+#end
+
+#set ($lightness = "35")
+#if ($styleMapOptions.lightness.data != "")
+	#set ($lightness = $styleMapOptions.lightness.data)
+#end
+
+#set ($gamma = "0.50")
+#if ($styleMapOptions.gamma.data != "")
+	#set ($gamma = $styleMapOptions.gamma.data)
+#end
+
+#set ($mapZoom = "15")
+#if ($mapOptions.mapZoom.data != "")
+	#set ($mapZoom = $mapOptions.mapZoom.data)
+#end
+
+<div id="$content_id" style="min-height:$mapHeight ; margin-top: $mapMarginTop ; margin-bottom: $mapMarginDown ;">&nbsp;</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script>
+  var map;
+  var MY_MAPTYPE_ID = 'custom_style';
+
+  function initialize() {
+    var featureOpts = [
+      {
+        stylers: [
+          { "visibility": "$mapVisibility" },
+          { "weight": $weight },
+          { "saturation": $saturation },
+          { "lightness": $lightness },
+          { "gamma": $gamma }
+        ]
+      }
+    ];
+    var mapOptions = {
+      zoom: $mapZoom,
+      scrollwheel: $mapOptions.scrollwheel.data,
+      navigationControl: $mapOptions.navigationControl.data,
+      mapTypeControl: $mapOptions.mapTypeControl.data,
+      scaleControl: $mapOptions.scaleControl.data,
+      draggable: $mapOptions.draggable.data,
+      disableDefaultUI: $mapOptions.disableDefaultUI.data,
+      center: new google.maps.LatLng$coordinatesMapData,
+      mapTypeControlOptions: {mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]},
+      mapTypeId: MY_MAPTYPE_ID
+    };
+
+    map = new google.maps.Map(document.getElementById('$content_id'), mapOptions);
+    var styledMapOptions = {name: 'Custom Style'};
+    var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
+    map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
+  }
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>

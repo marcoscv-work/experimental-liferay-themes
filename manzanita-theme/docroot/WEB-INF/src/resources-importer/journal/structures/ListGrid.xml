@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="string" indexType="" localizable="true" multiple="false" name="items-per-file" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+		<dynamic-element name="option1" type="option" value="2">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[2]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option2" type="option" value="3">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[3]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option3" type="option" value="4">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[4]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option4" type="option" value="5">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[5]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5" type="option" value="6">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[6]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option6" type="option" value="8">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[8]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Items per File]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[["3"]]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="" localizable="true" multiple="false" name="effect" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+		<dynamic-element name="option7886" type="option" value="mouseover">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Text details on mouse over]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option7887" type="option" value="none">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[none]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Effect]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[["mouseover"]]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="" localizable="true" name="list-item" readOnly="false" repeatable="true" required="false" showLabel="true" type="text" width="small">
+		<dynamic-element dataType="string" indexType="" localizable="true" name="tagline" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Item Tagline]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="" localizable="true" name="paragraph" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Item paragraph]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="" localizable="true" name="image" readOnly="false" repeatable="false" required="true" showLabel="true" type="ddm-documentlibrary" width="">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Item Image]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="" localizable="true" name="url-location" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Item Url]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[list Item]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>

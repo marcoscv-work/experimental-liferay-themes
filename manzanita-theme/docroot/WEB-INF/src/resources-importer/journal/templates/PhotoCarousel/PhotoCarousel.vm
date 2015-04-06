@@ -1,0 +1,62 @@
+#set ($article_id = $reserved-article-id.getData())
+#set ($content_id = "carousel-${article_id}")
+
+<div class="myCarousel_a carousel-container carousel-content" id="$content_id">
+	#foreach ($item in $carousel-item.siblings)
+		<div class="carousel-item">
+			<span class="carousel-text">
+				<span class="margins">
+					#if ($item.data != "")
+						<h1>
+							$item.data
+						</h1>
+					#end
+
+					#if ($item.tagline.data != "")
+						<h2 class="hidden-phone">
+							$item.tagline.data
+						</h2>
+					#end
+
+					#if ($item.paragraph.data != "")
+						<p class="visible-desktop">
+							$item.paragraph.data
+						</p>
+					#end
+
+			 		#if ($item.url-location.data != "")
+			 			<hr/>
+						<a href="$item.url-location.data" class="btn btn-large btn-primary green scroll-animate" title="$item.data">SEE MORE</a>
+					#end
+	  			</span>
+	  		</span>
+
+			<img src="$item.image.data" alt="$item.data" />
+	  	</div>
+	#end
+</div>
+
+<script type="text/javascript">
+    AUI().ready(
+        'aui-carousel', 'event-resize',
+        	function(A) {
+            	new A.Carousel(
+            	{
+                    contentBox: '#${content_id}',
+                    itemSelector: "div",
+                    intervalTime: $duration.data
+                }
+            ).render();
+
+        var updateCarouselHeight = function() {
+            var itemNode = A.one('#${content_id} .carousel-item img');
+            var itemHeight = itemNode.getComputedStyle('height');
+            A.one('#${content_id}').setStyle("height",itemHeight);
+        }
+
+        updateCarouselHeight();
+        A.on('windowresize', updateCarouselHeight);
+
+        }
+    );
+</script>

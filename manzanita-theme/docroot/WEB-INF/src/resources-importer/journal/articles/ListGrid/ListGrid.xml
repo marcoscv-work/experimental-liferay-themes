@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element instance-id="zZzO9a8O" name="items-per-file" type="list" index-type="">
+		<dynamic-content><![CDATA[3]]></dynamic-content>
+	</dynamic-element>
+
+	<dynamic-element instance-id="zZzO9a88" name="effect" type="list" index-type="">
+		<dynamic-content><![CDATA[mouseover]]></dynamic-content>
+	</dynamic-element>
+
+	<dynamic-element instance-id="zZzn3lcL" name="list-item" type="text" index-type="">
+		<dynamic-element instance-id="zZzKZiO2" name="tagline" type="text" index-type="">
+			<dynamic-content><![CDATA[Fugiat harum nulla voluptatem]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="zZzsweoF" name="paragraph" type="text" index-type="">
+			<dynamic-content><![CDATA[Id expedita explicabo dignissimos ut delectus reiciendis exce]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="zZzhI0fa" name="image" type="document_library" index-type="">
+			<dynamic-content><![CDATA[[$FILE=300x200_01.jpg$]]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="zZzRiz5o" name="url-location" type="link_to_layout" index-type="">
+			<dynamic-content><![CDATA[#content]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content><![CDATA[Salmentor]]></dynamic-content>
+	</dynamic-element>
+
+	<dynamic-element instance-id="cCcn3lcL" name="list-item" type="text" index-type="">
+		<dynamic-element instance-id="cCcKZiO2" name="tagline" type="text" index-type="">
+			<dynamic-content><![CDATA[Nulla voluptatem fugiat harum]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="cCcsweoF" name="paragraph" type="text" index-type="">
+			<dynamic-content><![CDATA[Ut delectus reiciendis exce id expedita explicabo dignissimos]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="cCchI0fa" name="image" type="document_library" index-type="">
+			<dynamic-content><![CDATA[[$FILE=300x200_02.jpg$]]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="cCcRiz5o" name="url-location" type="link_to_layout" index-type="">
+			<dynamic-content><![CDATA[#content]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content><![CDATA[Pskaitofrit]]></dynamic-content>
+	</dynamic-element>
+
+	<dynamic-element instance-id="vVvn3lcL" name="list-item" type="text" index-type="">
+		<dynamic-element instance-id="vVvKZiO2" name="tagline" type="text" index-type="">
+			<dynamic-content><![CDATA[Fugiat harum nulla voluptatem]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="vVvsweoF" name="paragraph" type="text" index-type="">
+			<dynamic-content><![CDATA[Id expedita explicabo dignissimos ut delectus reiciendis exce]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="vVvhI0fa" name="image" type="document_library" index-type="">
+			<dynamic-content><![CDATA[[$FILE=300x200_03.jpg$]]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="vVvRiz5o" name="url-location" type="link_to_layout" index-type="">
+			<dynamic-content><![CDATA[#content]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content><![CDATA[Consequatur]]></dynamic-content>
+	</dynamic-element>
+
+	<dynamic-element instance-id="bBbn3lcL" name="list-item" type="text" index-type="">
+		<dynamic-element instance-id="bBbKZiO2" name="tagline" type="text" index-type="">
+			<dynamic-content><![CDATA[Nulla voluptatem fugiat harum]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="bBbsweoF" name="paragraph" type="text" index-type="">
+			<dynamic-content><![CDATA[Explicabo expedita reiciendis exce dignissimos ut delectus]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="bBbhI0fa" name="image" type="document_library" index-type="">
+			<dynamic-content><![CDATA[[$FILE=300x200_04.jpg$]]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="bBbRiz5o" name="url-location" type="link_to_layout" index-type="">
+			<dynamic-content><![CDATA[#content]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content><![CDATA[Macross]]></dynamic-content>
+	</dynamic-element>
+
+	<dynamic-element instance-id="zXzn3lcL" name="list-item" type="text" index-type="">
+		<dynamic-element instance-id="zXzKZiO2" name="tagline" type="text" index-type="">
+			<dynamic-content><![CDATA[Fugiat harum nulla voluptatem]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="zXzsweoF" name="paragraph" type="text" index-type="">
+			<dynamic-content><![CDATA[Id expedita explicabo dignissimos ut delectus reiciendis exce]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="zXzhI0fa" name="image" type="document_library" index-type="">
+			<dynamic-content><![CDATA[[$FILE=300x200_05.jpg$]]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="zXzRiz5o" name="url-location" type="link_to_layout" index-type="">
+			<dynamic-content><![CDATA[#content]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content><![CDATA[Consequatur]]></dynamic-content>
+	</dynamic-element>
+
+	<dynamic-element instance-id="cVcn3lcL" name="list-item" type="text" index-type="">
+		<dynamic-element instance-id="cVcKZiO2" name="tagline" type="text" index-type="">
+			<dynamic-content><![CDATA[Fugiat harum nulla voluptatem]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="cVcsweoF" name="paragraph" type="text" index-type="">
+			<dynamic-content><![CDATA[Id expedita explicabo dignissimos ut delectus reiciendis exce]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="cVchI0fa" name="image" type="document_library" index-type="">
+			<dynamic-content><![CDATA[[$FILE=300x200_06.jpg$]]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="cVcRiz5o" name="url-location" type="link_to_layout" index-type="">
+			<dynamic-content><![CDATA[#content]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content><![CDATA[Productua]]></dynamic-content>
+	</dynamic-element>
+
+</root>

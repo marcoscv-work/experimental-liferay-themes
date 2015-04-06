@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element instance-id="O4bO9c99" name="contentFixed" type="ddm-text-html" index-type="">
+		<dynamic-content>
+			<![CDATA[
+				<div class="span7">
+					<h1 style="margin-top:50px;">Molestiae repudiandae Mobile</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore dolore, culpa tenetur alias magnam eaque tempora aliquam cupiditate optio assumenda sit quos dignissimos, natus reiciendis minima. Quo tempore eius molestias impedit. Delectus ipsum harum obcaecati praesentium at maxime asperiores amet optio unde repudiandae velit dolore et laboriosam consequatur, fugiat, expedita nam. Animi distinctio saepe, repudiandae maiores, ipsum, fugiat quisquam molestias porro eos quam quaerat omnis quibusdam. Iusto voluptas tempore cupiditate voluptatum, consequatur, hic deleniti vel, consequuntur facere itaque numquam excepturi! Et nam atque delectus a hic asperiores repellat, aspernatur iusto? Ea sed, natus voluptatem! Accusantium dolorem quae consequuntur mollitia delectus, temporibus suscipit repudiandae, tempore, minima molestiae itaque ad aperiam ducimus vero assumenda voluptas dolores repellat.</p>
+					<p>Iure illum at repellat, quam beatae omnis veniam quo, dolorum voluptatum, rem nulla saepe autem dicta laudantium odit. Reprehenderit aliquam necessitatibus doloribus sint, sunt nihil assumenda modi repellendus atque laudantium veniam, illo recusandae animi. In, nostrum suscipit autem maxime saepe animi quam minima, atque tempora cum possimus dignissimos cupiditate recusandae esse ipsum magni illo illum distinctio officiis libero, fugiat sequi. Ipsum, unde, fugiat. Eaque ut, officiis laboriosam porro assumenda illum minus in expedita dolores voluptatibus doloribus similique praesentium eum quis asperiores vitae saepe perferendis voluptate nam inventore delectus vel deserunt ab velit! Unde repudiandae, quidem at sunt quam ipsa ex distinctio quos, qui error quas libero possimus.</p>
+					<h2>Rem iure amet odit, perspiciatis mollitia.</h2>
+					<p><strong>Quasi eius qui ratione cumque, nesciunt aperiam earum nam nostrum beatae odit, dolor recusandae fuga voluptatem quo nulla ipsum minus.</strong></p>
+					<p>Laudantium cupiditate, deserunt maiores error, alias quas qui possimus numquam, repellendus cumque dolor, eligendi accusantium? Quod laboriosam atque expedita labore nam modi corporis corrupti suscipit blanditiis quis molestiae non natus beatae exercitationem vero cumque quaerat sint aliquid, deserunt sapiente esse, nisi, eum enim repudiandae. Est iste ratione error eligendi voluptates tenetur totam consectetur repudiandae tempora saepe ex dicta officiis voluptatem, blanditiis, placeat libero! Itaque optio accusamus velit vero repudiandae aut alias, nisi quidem? Assumenda esse labore eveniet magni, eligendi! Obcaecati eaque culpa quo eligendi, odio quod at non assumenda maxime magnam officiis. Repudiandae perferendis animi illo nisi repellat, magni voluptatem odio ullam. Totam dolores, architecto praesentium iusto, officia obcaecati. Saepe quae iure nihil in, facilis eum sed voluptatum quod cumque! Laboriosam maiores magni eum ipsa. Assumenda omnis, repellendus nam sapiente, autem tempore aliquid illo nisi aspernatur dolorem doloribus eveniet impedit. Ex beatae, autem ipsam eaque alias animi, esse soluta ipsum corporis dolorum.</p>
+				</div>
+				<div class="span5 hidden-phone">
+					<img alt="" src="[$FILE=lateral_01.jpg$]" style="width: 100%;" />
+				</div>
+			]]>
+		</dynamic-content>
+	</dynamic-element>
+</root>

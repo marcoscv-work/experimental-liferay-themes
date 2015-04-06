@@ -1,0 +1,58 @@
+#set ($article_id = $reserved-article-id.getData())
+#set ($content_id = "list-${article_id}")
+
+#if ($items-per-file.data == "2")
+	#set ($itemsPerFileCol = "50%")
+#elseif ($items-per-file.data == "3")
+	#set ($itemsPerFileCol = "33.33%")
+#elseif ($items-per-file.data == "4")
+	#set ($itemsPerFileCol = "25%")
+#elseif ($items-per-file.data == "5")
+	#set ($itemsPerFileCol = "20%")
+#elseif ($items-per-file.data == "6")
+	#set ($itemsPerFileCol = "16.65%")
+#elseif ($items-per-file.data == "8")
+	#set ($itemsPerFileCol = "12.5%")
+#end
+
+#if ($effect.data == "none")
+	#set ($effectType = "none")
+#else
+	#set ($effectType = "mouseover")
+#end
+
+
+<div class="list-container" id="$content_id">
+	#foreach ($item in $list-item.siblings)
+		<div class="list-item $effectType" style="width:$itemsPerFileCol;">
+			#if ($item.url-location.data != "")
+				<a href="$item.url-location.data">
+			#end
+					<span class="list-text">
+						<span class="margins">
+							#if ($item.data != "")
+								<h1>
+									$item.data
+								</h1>
+							#end
+
+							#if ($item.tagline.data != "")
+								<h2 class="hidden-phone">
+									$item.tagline.data
+								</h2>
+							#end
+
+							#if ($item.paragraph.data != "")
+								<p class="visible-desktop">
+									$item.paragraph.data
+								</p>
+							#end
+			  			</span>
+			  		</span>
+					<img src="$item.image.data" alt="$item.data" />
+			#if ($item.url-location.data != "")
+				</a>
+			#end
+	  	</div>
+	#end
+</div>

@@ -1,0 +1,349 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="coordinatesMap" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="medium">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Map Coordinates]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[40.4111803, -3.693051]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element fieldNamespace="ddm" indexType="keyword" localizable="true" name="styleMapOptions" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-separator" width="">
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="mapHeight" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+			<dynamic-element dataType="string" indexType="keyword" localizable="true" name="mapMarginTop" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Map margin top]]>
+					</entry>
+					<entry name="predefinedValue">
+						<![CDATA[0]]>
+					</entry>
+					<entry name="tip">
+						<![CDATA[]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element dataType="string" indexType="keyword" localizable="true" name="mapMarginDown" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Map margin down]]>
+					</entry>
+					<entry name="predefinedValue">
+						<![CDATA[]]>
+					</entry>
+					<entry name="tip">
+						<![CDATA[]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Map height]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[350px]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" multiple="false" name="mapVisibility" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+			<dynamic-element name="option19562" type="option" value="on">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[on]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option19563" type="option" value="off">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[off]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option19564" type="option" value="simplified">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[simplified]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Map Visibility]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[["simplified"]]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="double" indexType="keyword" localizable="true" name="weight" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Traze Weight]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[5]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="double" indexType="keyword" localizable="true" name="saturation" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Saturation]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[-20]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="double" indexType="keyword" localizable="true" name="lightness" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Lightness]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[35]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="double" indexType="keyword" localizable="true" name="gamma" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Gamma]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[0.50]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Style map options]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+			<entry name="style">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element fieldNamespace="ddm" indexType="keyword" localizable="true" name="mapOptions" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-separator" width="">
+		<dynamic-element dataType="integer" fieldNamespace="ddm" indexType="keyword" localizable="true" name="mapZoom" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-integer" width="small">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Map zoom]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[15]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" multiple="false" name="scrollwheel" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+			<dynamic-element name="option32879" type="option" value="true">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[true]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option32880" type="option" value="false">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[false]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[scrollwheel]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[["false"]]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" multiple="false" name="navigationControl" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+			<dynamic-element name="option33164" type="option" value="true">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[true]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option33165" type="option" value="false">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[false]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[navigationControl]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[["false"]]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" multiple="false" name="mapTypeControl" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+			<dynamic-element name="option33449" type="option" value="true">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[true]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option33450" type="option" value="false">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[false]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[mapTypeControl]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[["false"]]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" multiple="false" name="scaleControl" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+			<dynamic-element name="option33734" type="option" value="true">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[true]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option33735" type="option" value="false">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[false]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[scaleControl]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[["false"]]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" multiple="false" name="draggable" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+			<dynamic-element name="option34019" type="option" value="true">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[true]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option34020" type="option" value="false">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[false]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[draggable]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[["false"]]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" multiple="false" name="disableDefaultUI" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+			<dynamic-element name="option34304" type="option" value="true">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[true]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option34305" type="option" value="false">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[false]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[disableDefaultUI]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[["true"]]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Map options]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+			<entry name="style">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>

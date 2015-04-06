@@ -1,0 +1,86 @@
+{
+	"layoutTemplateId": "1_column",
+	"publicPages": [
+		{
+			"columns": [
+				[
+					"HomePhotoCarousel.xml",
+					"ListGrid.xml"
+				]
+			],
+			"friendlyURL": "/home",
+			"name": "Home",
+			"title": "Home"
+		},
+		{
+			"columns": [
+				[
+					"MobilesProducts.xml",
+					"FixedBGphoto01.html",
+					"TextLorem.xml"
+				]
+			],
+			"friendlyURL": "/mobiles",
+			"name": "Mobiles",
+			"title": "Mobiles"
+		},
+		{
+			"columns": [
+				[
+					"HomeProducts.xml",
+					"FixedBGphoto02.html",
+					"TextLorem.xml"
+				]
+			],
+			"friendlyURL": "/tablets",
+			"name": "Tablets",
+			"title": "Tablets"
+		},
+		{
+			"columns": [
+				[
+					"FixedBGphoto03.html",
+					"TextLorem.xml",
+					"ListGrid_services.xml"
+				]
+			],
+			"friendlyURL": "/services",
+			"name": "Services",
+			"title": "Services"
+		},
+		{
+			"columns": [
+				[
+					"TextLorem.xml",
+					"ListGrid_products.xml"
+				]
+			],
+			"friendlyURL": "/products",
+			"name": "Products",
+			"title": "Products"
+		},
+		{
+			"columns": [
+				[
+					"ListGrid_services.xml",
+					"TextLorem.xml",
+					"FixedBGphoto02.html",
+					"TextLorem.xml"
+				]
+			],
+			"friendlyURL": "/manzanita",
+			"name": "Manzanita",
+			"title": "Manzanita"
+		},
+		{
+			"columns": [
+				[
+					"HomeMap.xml"
+				]
+			],
+			"friendlyURL": "/contactus",
+			"name": "Contact Us",
+			"title": "Contact Us"
+		}
+	]
+}
