@@ -78,6 +78,9 @@ $theme.include($body_top_include)
 			#set ($footerMaxWidthStyle = "")
 		#end
 		<div class="container" $footerMaxWidthStyle>
+			<div class="row pre-breadcrumbs">
+				<nav id="breadcrumbs" class="span12">#breadcrumbs()</nav>
+			</div>
 			#set ($footerContent = $theme.getSetting("footer-web-content-article-id"))
 
 			#if (($footerContent!=""))
@@ -86,7 +89,7 @@ $theme.include($body_top_include)
 				<div class="row">
 					<div class="span4">
 						<ul class="unstyled">
-							<li>liferay.com</li>
+							<li>Liferay.com</li>
 							<li>dev.liferay.com</li>
 							<li>AlloyUI.com</li>
 							<li>AlloyEditor.com</li>
@@ -94,16 +97,24 @@ $theme.include($body_top_include)
 					</div>
 					<div class="span4">
 						<ul class="unstyled">
-							<li>liferay.com</li>
-							<li>dev.liferay.com</li>
-							<li>AlloyUI.com</li>
-							<li>AlloyEditor.com</li>
+							<li>
+								<a href="https://github.com/liferay">GitHub.com/liferay</a>
+							</li>
+							<li>
+								<a href="https://github.com/marcoscv-work/experimental-liferay-themes">Experimental Themes</a>
+							</li>
+							<li>
+								<a href="https://www.liferay.com/web/marcos.castro/blog">Meet the team</a>
+							</li>
 						</ul>
 					</div>
 					<div class="span4">
 						<ul class="unstyled">
-							<li>Copyright 2015</li>
-							<li>License checker</li>
+							<li>
+								<img alt="$logo_description" height="20" src="$images_folder/logo.png" width="20" style="background: #CCC;" class="img-circle" />
+								Manzanita-theme 2015
+							</li>
+							<li>Free use (Do not redistribute)</li>
 						</ul>
 					</div>
 				</div>
