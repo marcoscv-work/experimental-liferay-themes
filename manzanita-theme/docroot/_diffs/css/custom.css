@@ -30,6 +30,15 @@ $mainNavbarHeight: 46px;
 		}
 	}
 
+	a.btn {
+		border-radius: 0;
+		border: 0;
+	}
+
+	form {
+		margin: 0;
+	}
+
 	#wrapper {
 		font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 		padding: 0;
