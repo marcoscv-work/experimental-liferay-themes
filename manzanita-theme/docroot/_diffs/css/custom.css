@@ -391,3 +391,9 @@ $mainNavbarHeight: 46px;
 		}
 	}
 }
+
+@include respond-to(phone) {
+	.aui .marginsOnMobile {
+		padding: 0 20px;
+	}
+}
