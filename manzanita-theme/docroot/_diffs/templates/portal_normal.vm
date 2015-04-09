@@ -40,7 +40,6 @@
 	#end
 </head>
 
-
 #set ($dockbarVertical = $theme.getSetting("dockbar-vertical"))
 
 #if ($dockbarVertical == true)
@@ -107,8 +106,8 @@ $theme.include($body_top_include)
 			#set ($footerMaxWidthStyle = "")
 		#end
 		<div class="container" $footerMaxWidthStyle>
-			<div class="row pre-breadcrumbs">
-				<nav id="breadcrumbs" class="span12">#breadcrumbs()</nav>
+			<div class="pre-breadcrumbs row">
+				<nav class="span12" id="breadcrumbs">#breadcrumbs()</nav>
 			</div>
 			#set ($footerContent = $theme.getSetting("footer-web-content-article-id"))
 
@@ -140,7 +139,7 @@ $theme.include($body_top_include)
 					<div class="span4">
 						<ul class="unstyled">
 							<li>
-								<img alt="$logo_description" height="20" src="$images_folder/logo.png" width="20" style="background: #CCC;" class="img-circle" />
+								<img alt="$logo_description" class="img-circle" height="20" src="$images_folder/logo.png" style="background: #CCC;" width="20" />
 								Manzanita-theme 2015
 							</li>
 							<li>Free use (Do not redistribute)</li>

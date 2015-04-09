@@ -1,6 +1,6 @@
 <nav class="$nav_css_class" id="navigation" role="navigation">
 	<ul aria-label="#language ("site-pages")" class="ul-main-nav" role="menubar">
-		<span class="menu-icon hidden-desktop">
+		<span class="hidden-desktop menu-icon">
 			<span class="line1"></span>
 			<span class="line2"></span>
 		</span>
@@ -56,7 +56,7 @@
 			<span class="portlet-search">
 				$theme.search()
 			</span>
-			<a href="#" class="open-search">
+			<a class="open-search" href="#">
 				<i class="icon-search"></i>
 			</a>
 			#if (!$is_signed_in)
