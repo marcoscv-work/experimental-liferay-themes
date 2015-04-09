@@ -11,37 +11,39 @@ AUI().ready(
 
 		var Lang = A.Lang;
 
-		BODY = A.getBody();
+		var BODY = A.getBody();
 
 		var WIN = A.getWin();
 
 		// Open search top
 
-		searchIcon  = A.one('.open-search');
-		rightIconGroup  = A.one('.right-icon-group');
+		var searchIcon = A.one('.open-search');
+		var rightIconGroup = A.one('.right-icon-group');
 
 		if (searchIcon) {
 			searchIcon.on(
 				'click',
 				function() {
 					if (!BODY.hasClass('opened-search')) {
-						closingSearch = rightIconGroup.once(
+						var closingSearch = rightIconGroup.once(
 							'clickoutside',
 								function() {
 									BODY.removeClass('opened-search');
 								}
-							)
-					} else {
+							);
+					}
+					else {
 						closingSearch.detach();
 					}
 
 					BODY.toggleClass('opened-search');
 
 					var openSearchInput = A.one('.portlet-search input[type="text"]');
+
 					openSearchInput.focus();
 				}
 			);
-		};
+		}
 
 		// Open hamburguer menu
 
@@ -80,6 +82,6 @@ AUI().ready(
 					}
 				);
 			}
-		};
+		}
 	}
 );
