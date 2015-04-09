@@ -24,15 +24,15 @@ $mainNavbarHeight: 46px;
 
 		&.negative-space-between-header {
 			#content {
-				top: -$mainNavbarHeight;
 				position: relative;
+				top: -$mainNavbarHeight;
 			}
 		}
 	}
 
 	a.btn {
 		border-radius: 0;
-		border: 0;
+		border-width: 0;
 	}
 
 	form {
@@ -41,127 +41,127 @@ $mainNavbarHeight: 46px;
 
 	#wrapper {
 		font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-		padding: 0;
-		margin: 0;
 		height: 100%;
+		margin: 0;
+		padding: 0;
 	}
 
 	#banner {
-	 	background: #555;
-	 	background: rgba(0, 0, 0, 0.6);
-	 	height: $mainNavbarHeight;
-	 	z-index: 9;
+		background: #555;
+		background: rgba(0, 0, 0, 0.6);
+		height: $mainNavbarHeight;
+		z-index: 9;
 
- 		a {
- 			color: #FFF;
- 			display: inline-block;
+		a {
+			color: #FFF;
+			display: inline-block;
 
 			&:hover, &.active {
 				text-decoration: none;
 
 				@include opacity(0.5);
 			}
- 		}
+		}
 
-	 	#heading {
-	 		display: inline-block;
+		#heading {
+			display: inline-block;
 
-	 		.default-logo {
-	 			min-height: $mainNavbarHeight;
+			.default-logo {
+				min-height: $mainNavbarHeight;
 
-	 			img {
-	 				max-height: 35px;
-	 				max-width: 35px;
-	 				padding-top: 3px;
-	 			}
-	 		}
-	 	}
+				img {
+					max-height: 35px;
+					max-width: 35px;
+					padding-top: 3px;
+				}
+			}
+		}
 
-	 	#navigation {
-			text-align: justify;
+		#navigation {
 			display: block;
+			text-align: justify;
 
-	 		ul {
-	 			vertical-align: top;
-	 			margin: 0;
-	 			min-height: $mainNavbarHeight;
-	 		}
+			ul {
+				margin: 0;
+				min-height: $mainNavbarHeight;
+				vertical-align: top;
+			}
 
-	 		#heading {
-	 			display: inline-block;
-	 			width: 35px;
-	 		}
+			#heading {
+				display: inline-block;
+				width: 35px;
+			}
 
-	 		li {
-	 			list-style: none;
-	 			display: inline-block;
+			li {
+				display: inline-block;
+				list-style: none;
 
 				a {
 					display: block;
-					line-height: 25px;
-					padding: 10px;
 					font-size: 110%;
 					font-weight: 300;
+					line-height: 25px;
+					padding: 10px;
 				}
 
 				&.selected a {
 					opacity: 0.7;
 				}
-	 		}
+			}
 
-	 		#sign-in {
-	 			font-size: 20px;
-	 			margin-left: 20px;
-	 			display: inline-block;
-	 			vertical-align: middle;
-	 		}
+			#sign-in {
+				display: inline-block;
+				font-size: 20px;
+				margin-left: 20px;
+				vertical-align: middle;
+			}
 
-	 		.right-icon-group {
-	 			text-align: right;
-	 			display: inline-block;
-	 		}
+			.right-icon-group {
+				display: inline-block;
+				text-align: right;
+			}
 
-	 		.portlet-search {
-	 			display: inline-block;
-	 			margin-right: -25px;
+			.portlet-search {
+				display: inline-block;
+				margin-right: -25px;
 
-	 			form {
-	 				margin: 0;
-	 				padding: 0;
+				form {
+					margin: 0;
+					padding: 0;
 
-	 				input {
-	 					margin-bottom: 3px;
-	 					width: 1px;
-	 					padding: 0;
+					input {
+						margin-bottom: 3px;
+						padding: 0;
+						width: 1px;
 
-	 					@include opacity(0);
-	 					@include border-radius(5px);
-	 				}
+						@include border-radius(5px);
+						@include opacity(0);
+					}
 
-	 				select, input[type="image"] {
-		 				display: none;
-		 			}
-	 			}
-	 		}
+					select, input[type="image"] {
+						display: none;
+					}
+				}
+			}
 
 			.ul-main-nav:after {
 				content: " ";
 				display: inline-block;
+				height: 0;
 				position: relative;
 				width: 100%;
-				height: 0;
 			}
 
 			* {
 				@include transition(all 0.5s ease-in-out);
 			}
-	 	}
+		}
 	}
 
 	.opened-search #banner #navigation {
 		.portlet-search form input {
-			width: 150px;
 			padding: 4px;
+			width: 150px;
 
 			@include opacity(1);
 		}
@@ -182,11 +182,11 @@ $mainNavbarHeight: 46px;
 	}
 
 	#footer {
-	 	background: #F2F2F2;
+		background: #F2F2F2;
 
-	 	.container {
-	 		padding: 20px 0;
-	 	}
+		.container {
+			padding: 20px 0;
+		}
 	}
 
 	/* ---------- Carousel ---------- */
@@ -222,9 +222,9 @@ $mainNavbarHeight: 46px;
 					bottom: 300%;
 					height: 50px;
 					left: 50px;
+					opacity: 0;
 					position: absolute;
 					width: 50px;
-					opacity: 0;
 
 					@include transition(all 0.2s ease-in-out);
 
@@ -271,11 +271,12 @@ $mainNavbarHeight: 46px;
 	}
 
 	.columns-max {
-		max-width: 1170px;
 		margin: 0 auto;
+		max-width: 1170px;
 	}
 
 	/* ---------- dockbar vertical ---------- */
+
 	.dockbar-vertical {
 		.icon-toggle-dockbar {
 			z-index: 9;
@@ -301,10 +302,10 @@ $mainNavbarHeight: 46px;
 
 @include respond-to(tablet) {
 	#banner #navigation li a {
-		padding: 2%;
-		width: 22%;
 		float: left;
+		padding: 2%;
 		text-align: center;
+		width: 22%;
 	}
 }
 
@@ -327,20 +328,20 @@ $mainNavbarHeight: 46px;
 
 			#navigation {
 				.menu-icon {
-					width: 25px;
+					cursor: pointer;
 					height: 25px;
+					left: 20px;
 					position: absolute;
 					top: 12px;
-					left: 20px;
-					cursor: pointer;
+					width: 25px;
 
 					.line1, .line2 {
 						background: #FFF;
-						height: 3px;
-						width: 17px;
 						display: block;
+						height: 3px;
 						position: relative;
 						top: 7px;
+						width: 17px;
 
 						@include border-radius(3px);
 					}
@@ -351,17 +352,17 @@ $mainNavbarHeight: 46px;
 				}
 
 				#heading {
-					width: 40px;
 					left: 50%;
-					position: relative;
 					margin-left: -20px;
+					position: relative;
 					top: 13px;
+					width: 40px;
 				}
 
 				.right-icon-group {
 					position: absolute;
-					top: 13px;
 					right: 20px;
+					top: 13px;
 				}
 
 				ul li {
@@ -371,8 +372,8 @@ $mainNavbarHeight: 46px;
 		}
 
 		.opened-search #banner #navigation .portlet-search form input {
-			padding: 2px 4px;
 			font-size: 110%;
+			padding: 2px 4px;
 		}
 
 		.opened-menu-icon #banner #navigation {
@@ -400,7 +401,7 @@ $mainNavbarHeight: 46px;
 		}
 
 		#footer ul {
-		 		padding: 20px;
+				padding: 20px;
 		}
 	}
 }

@@ -4,22 +4,6 @@
 @import "compass/css3/user-interface";
 @import "mixins";
 
-/*$dockbarGradientEnd: #1273C7;
-$dockbarGradientStart: #118ADE;
-
-$dockbarOpenGradientEnd: #0993DD;
-$dockbarOpenGradientStart: #0EA6F9;
-
-$lightLiferayBlue: #45CBF5;
-$standarLiferayBlue: #009AE5;
-
-$lightGreen: #92F545;
-$standarGrey: #555;
-
-$activeResponsiveMenu: #F5AF45;
-
-$dockbarVerticalWidth: 240px;*/
-
 $dockbarGradientEnd: #888;
 $dockbarGradientStart: #777;
 
@@ -35,7 +19,6 @@ $standarGrey: #555;
 $activeResponsiveMenu: #555;
 
 $dockbarVerticalWidth: 240px;
-
 
 .aui {
 	body {
