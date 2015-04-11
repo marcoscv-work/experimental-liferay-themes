@@ -28,7 +28,7 @@
 			}
 		#end
 		#if (($footerColor!="") || ($footerTextColor!=""))
-			.aui #footer {
+			.aui #footer, .aui #footer .breadcrumb {
 				background: $footerColor;
 				color: $footerTextColor;
 			}
@@ -142,7 +142,7 @@ $theme.include($body_top_include)
 								<img alt="$logo_description" class="img-circle" height="20" src="$images_folder/logo.png" style="background: #CCC;" width="20" />
 								Manzanita-theme 2015
 							</li>
-							<li>Free use (Do not redistribute)</li>
+							<li>Free use (Don't redistribute photos)</li>
 						</ul>
 					</div>
 				</div>

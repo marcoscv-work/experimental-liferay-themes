@@ -2,7 +2,7 @@
 
 <root available-locales="en_US" default-locale="en_US">
 	<dynamic-element instance-id="O4aO9a8O" name="duration" type="list" index-type="">
-		<dynamic-content><![CDATA[5]]></dynamic-content>
+		<dynamic-content><![CDATA[10]]></dynamic-content>
 	</dynamic-element>
 
 	<dynamic-element instance-id="qYyn3lcL" name="carousel-item" type="text" index-type="">
