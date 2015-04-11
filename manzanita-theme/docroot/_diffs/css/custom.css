@@ -154,6 +154,7 @@ $mainNavbarHeight: 46px;
 
 			* {
 				@include transition(all 0.5s ease-in-out);
+				@include translate3d(0, 0, 0, 0);
 			}
 		}
 	}
@@ -227,10 +228,12 @@ $mainNavbarHeight: 46px;
 					width: 50px;
 
 					@include transition(all 0.2s ease-in-out);
+					@include translate3d(0, 0, 0, 0);
 
 					&:hover {
 						@include opacity(0.4);
 						@include transition(all 0.2s ease-in-out);
+						@include translate3d(0, 0, 0, 0);
 					}
 				}
 
