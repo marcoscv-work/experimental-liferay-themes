@@ -5,17 +5,18 @@ This theme includes Dockbar Vertical in gray tones. You can decide to use this V
 
 Manzanita-theme is totally open source, you can access to its GitHub repository, modify, redistribute or why not, contribute to improve it. Only a little advice, included photos are totally free from: unspalsh.com, picjumbo.com and publicdomainarchive.com, please, if you are going to use them, don’t forget to thanks ;)
 
-* Theme settings available
-** Dockbar Vertical Style
-** Show Portlet Borders by Default
-** Use Site Logo
-** Space Between Header and Content
-** Footer Content ID
-** Main Container fluid 100%
-** Header/Footer Max Width (px or %, total-max-width 1170px)
-** Navigation/Footer Color
 * It uses vertical dockbar over your _styled liferay theme
 * You will be able to change dockbar colors easier
+
+Theme settings available:
+* Dockbar Vertical Style
+* Show Portlet Borders by Default
+* Use Site Logo
+* Space Between Header and Content
+* Footer Content ID
+* Main Container fluid 100%
+* Header/Footer Max Width (px or %, total-max-width 1170px)
+* Navigation/Footer Color
 
 ![manzanita-theme 01](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/manzanita-theme/docroot/WEB-INF/releng/screenshots/1.jpg)
 
