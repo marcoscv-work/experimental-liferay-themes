@@ -19,12 +19,12 @@ Manzanita-theme is totally open source, you can access to its GitHub repository,
 
 ![manzanita-theme 01](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/manzanita-theme/docroot/WEB-INF/releng/screenshots/1.jpg)
 
-![manzanita-theme 02](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/manzanita-theme/docroot/WEB-INF/releng/screenshots/2.jpg)
+![manzanita-theme 02](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/manzanita-theme/docroot/WEB-INF/releng/screenshots/2.jpg)
 
-![manzanita-theme 03](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/manzanita-theme/docroot/WEB-INF/releng/screenshots/3.jpg)
+![manzanita-theme 03](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/manzanita-theme/docroot/WEB-INF/releng/screenshots/3.jpg)
 
-![manzanita-theme 04](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/manzanita-theme/docroot/WEB-INF/releng/screenshots/4.jpg)
+![manzanita-theme 04](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/manzanita-theme/docroot/WEB-INF/releng/screenshots/4.jpg)
 
-![manzanita-theme 05](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/manzanita-theme/docroot/WEB-INF/releng/screenshots/5.jpg)
+![manzanita-theme 05](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/manzanita-theme/docroot/WEB-INF/releng/screenshots/5.jpg)
 
-![manzanita-theme 06](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/manzanita-theme/docroot/WEB-INF/releng/screenshots/6.jpg)
+![manzanita-theme 06](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/manzanita-theme/docroot/WEB-INF/releng/screenshots/6.jpg)
