@@ -38,7 +38,7 @@ You can find here the next **Liferay 6.2+ themes**:
 
 ![alt tag](https://raw.githubusercontent.com/marcoscv-work/experimental-liferay-themes/master/previews/lateral-portlets-menu-theme.gif)
 
-## [manzanita-theme](https://github.com/marcoscv-work/experimental-liferay-themes/tree/master/manzanita-theme)
+## [manzanita-theme](https://github.com/marcoscv-work/manzanita-theme)
 
 
 * Manzanita theme
