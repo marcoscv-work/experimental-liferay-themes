@@ -15,7 +15,7 @@
 #set ($dockbar = $theme.getSetting("dockbar-vertical"))
 
 #if ($dockbar == true)
-	#set ($css_class = "${css_class} dockbar-vertical")
+	#set ($css_class = "${css_class} dockbar-vertical lfr-has-dockbar-vertical")
 #end
 
 <body class="$css_class">
